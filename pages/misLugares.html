@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis lugares | SumercExtreme</title>
+    <meta name="description" content="Marca los lugares de turismo extremo en Boyacá que ya visitaste y lleva tu propio registro de aventuras.">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="paginaMisLugares">
+
+    <a class="saltarContenido" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="encabezado">
+        <a class="logo" href="../index.html">
+            <span class="logoCirculos" aria-hidden="true"></span>
+            <span class="logoTexto">SumercExtreme</span>
+        </a>
+
+        <nav aria-label="Principal">
+            <ul class="menuElementos">
+                <li><a href="agua.html"><span class="icono iconoAgua" aria-hidden="true"></span>Agua</a></li>
+                <li><a href="tierra.html"><span class="icono iconoTierra" aria-hidden="true"></span>Tierra</a></li>
+                <li><a href="viento.html"><span class="icono iconoViento" aria-hidden="true"></span>Viento</a></li>
+            </ul>
+            <ul class="menuAcciones">
+                <li><a class="boton botonBorde" href="misLugares.html" aria-current="page">Mis lugares</a></li>
+                <li><a class="boton botonAmarillo" href="buzon.html">Buzón</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+
+        <section class="hero" aria-labelledby="tituloPrincipal">
+            <h1 id="tituloPrincipal">Mis lugares</h1>
+            <p class="heroTexto">Marca los lugares que ya visitaste y lleva tu propio registro de aventuras. Tu lista se guarda solo en este computador.</p>
+
+            <div class="tarjetaProgreso">
+                <p id="textoProgreso">Has visitado <strong>4</strong> de <strong>34</strong> lugares</p>
+                <progress class="barraProgreso" max="34" value="4" aria-labelledby="textoProgreso">4 de 34</progress>
+            </div>
+        </section>
+
+        <section class="filtros" aria-labelledby="tituloFiltros">
+            <h2 id="tituloFiltros" class="soloLectores">Filtrar mis lugares</h2>
+            <ul class="listaFiltros">
+                <li><button type="button" class="chipFiltro" aria-pressed="true">Todos (34)</button></li>
+                <li><button type="button" class="chipFiltro" aria-pressed="false">Agua (10)</button></li>
+                <li><button type="button" class="chipFiltro" aria-pressed="false">Tierra (13)</button></li>
+                <li><button type="button" class="chipFiltro" aria-pressed="false">Viento (11)</button></li>
+                <li><button type="button" class="chipFiltro" aria-pressed="false">Solo visitados (4)</button></li>
+            </ul>
+        </section>
+
+        <!-- Cada fila: casilla + nombre + insignia "Visitado" + enlace.
+             La insignia está en todas las filas; el CSS la muestra solo cuando la casilla
+             está marcada, con el selector: .itemLugar input:checked ~ .etiquetaVisitado -->
+
+        <section class="grupoElemento temaAgua" aria-labelledby="tituloGrupoAgua">
+            <header class="grupoEncabezado">
+                <h2 id="tituloGrupoAgua"><span class="icono iconoAgua" aria-hidden="true"></span> Agua</h2>
+                <p class="grupoConteo">2 de 10 visitados</p>
+            </header>
+            <ul class="listaChecklist">
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugarLagoTota" name="lugarLagoTota" checked>
+                    <label for="lugarLagoTota">
+                        <span class="lugarNombre">Lago de Tota</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Aquitania – Tota – Cuítiva</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugar.html">Ver lugar<span class="soloLectores"> Lago de Tota</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugarRioLengupa" name="lugarRioLengupa">
+                    <label for="lugarRioLengupa">
+                        <span class="lugarNombre">Río Lengupá</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> San Luis de Gaceno</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugar.html">Ver lugar<span class="soloLectores"> Río Lengupá</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugarEmbalseChivor" name="lugarEmbalseChivor" checked>
+                    <label for="lugarEmbalseChivor">
+                        <span class="lugarNombre">Embalse de Chivor</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Macanal / Almeida</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugar.html">Ver lugar<span class="soloLectores"> Embalse de Chivor</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugarLagoSochagota" name="lugarLagoSochagota">
+                    <label for="lugarLagoSochagota">
+                        <span class="lugarNombre">Lago Sochagota</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Paipa</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugar.html">Ver lugar<span class="soloLectores"> Lago Sochagota</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+            </ul>
+            <a class="enlaceGrupo" href="agua.html">Ver los 10 lugares de Agua</a>
+        </section>
+
+        <section class="grupoElemento temaTierra" aria-labelledby="tituloGrupoTierra">
+            <header class="grupoEncabezado">
+                <h2 id="tituloGrupoTierra"><span class="icono iconoTierra" aria-hidden="true"></span> Tierra</h2>
+                <p class="grupoConteo">1 de 13 visitados</p>
+            </header>
+            <ul class="listaChecklist">
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugarDesiertoCandelaria" name="lugarDesiertoCandelaria" checked>
+                    <label for="lugarDesiertoCandelaria">
+                        <span class="lugarNombre">Desierto de La Candelaria</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Villa de Leyva – Sáchica – Ráquira</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugar.html">Ver lugar<span class="soloLectores"> Desierto de La Candelaria</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugarCuevaFabrica" name="lugarCuevaFabrica">
+                    <label for="lugarCuevaFabrica">
+                        <span class="lugarNombre">Cueva de la Fábrica</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Vía Villa de Leyva – Santa Sofía</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugar.html">Ver lugar<span class="soloLectores"> Cueva de la Fábrica</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <!-- PENDIENTE: completar las filas restantes de Tierra desde el Figma, frame "06 · Mis lugares" -->
+
+            </ul>
+            <a class="enlaceGrupo" href="tierra.html">Ver los 13 lugares de Tierra</a>
+        </section>
+
+        <section class="grupoElemento temaViento" aria-labelledby="tituloGrupoViento">
+            <header class="grupoEncabezado">
+                <h2 id="tituloGrupoViento"><span class="icono iconoViento" aria-hidden="true"></span> Viento</h2>
+                <!-- VERIFICAR en el Figma: 4 visitados en total menos 2 de Agua y 1 de Tierra da 1 -->
+                <p class="grupoConteo">1 de 11 visitados</p>
+            </header>
+            <ul class="listaChecklist">
+
+                <!-- PENDIENTE: filas de Viento desde el Figma, mismo bloque <li class="itemLugar"> de arriba -->
+
+            </ul>
+            <a class="enlaceGrupo" href="viento.html">Ver los 11 lugares de Viento</a>
+        </section>
+
+        <section class="bandaBuzon" aria-labelledby="tituloBandaBuzon">
+            <span class="icono iconoCorreo" aria-hidden="true"></span>
+            <div>
+                <h2 id="tituloBandaBuzon">¿Echas de menos un lugar?</h2>
+                <p>Cuéntanos qué lugar o actividad deberíamos agregar, o si algún dato está desactualizado.</p>
+            </div>
+            <a class="boton botonOscuro" href="buzon.html">Ir al buzón</a>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="pieMarca">
+            <p class="pieNombre">SumercExtreme</p>
+            <p>Información de turismo extremo en Boyacá, organizada por elemento: agua, tierra y viento.</p>
+            <p class="pieAviso">Proyecto académico informativo. No vende ni reserva actividades.</p>
+        </div>
+
+        <section class="pieContacto" aria-labelledby="pieTituloContacto">
+            <h2 id="pieTituloContacto">Contacto</h2>
+            <ul>
+                <li><span class="icono iconoCorreo" aria-hidden="true"></span> Correo del proyecto</li>
+                <li><span class="icono iconoUbicacion" aria-hidden="true"></span> Sogamoso, Boyacá</li>
+                <li><span class="icono iconoCorreo" aria-hidden="true"></span> <a href="buzon.html">Escríbenos en el buzón</a></li>
+            </ul>
+        </section>
+
+        <nav class="pieEnlaces" aria-labelledby="pieTituloEnlaces">
+            <h2 id="pieTituloEnlaces">Enlaces</h2>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="misLugares.html" aria-current="page">Mis lugares</a></li>
+                <li><a href="buzon.html">Buzón</a></li>
+                <li><a href="accesibilidad.html">Accesibilidad</a></li>
+            </ul>
+        </nav>
+
+        <div class="pieLinea">
+            <p>2026 SumercExtreme · Proyecto integrador 2026-II</p>
+            <p>Fuente principal de datos: SITUR Boyacá</p>
+        </div>
+    </footer>
+
+    <a class="botonAccesibilidad" href="accesibilidad.html">
+        <span class="icono iconoAccesibilidad" aria-hidden="true"></span> Accesibilidad
+    </a>
+
+</body>
+</html>

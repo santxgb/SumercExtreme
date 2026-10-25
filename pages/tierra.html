@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tierra | SumercExtreme</title>
+    <meta name="description" content="Actividades de turismo extremo en cuevas, paredes de roca, desiertos y alta montaña de Boyacá.">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="temaTierra paginaTierra">
+
+    <a class="saltarContenido" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="encabezado">
+        <a class="logo" href="../index.html">
+            <span class="logoCirculos" aria-hidden="true"></span>
+            <span class="logoTexto">SumercExtreme</span>
+        </a>
+
+        <nav aria-label="Principal">
+            <ul class="menuElementos">
+                <li><a href="agua.html"><span class="icono iconoAgua" aria-hidden="true"></span>Agua</a></li>
+                <li><a href="tierra.html" aria-current="page"><span class="icono iconoTierra" aria-hidden="true"></span>Tierra</a></li>
+                <li><a href="viento.html"><span class="icono iconoViento" aria-hidden="true"></span>Viento</a></li>
+            </ul>
+            <ul class="menuAcciones">
+                <li><a class="boton botonBorde" href="misLugares.html">Mis lugares</a></li>
+                <li><a class="boton botonAmarillo" href="buzon.html">Buzón</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+
+        <section class="hero heroElemento" aria-labelledby="tituloPrincipal">
+            <nav class="migasPan" aria-label="Ruta de navegación">
+                <ol>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li aria-current="page">Tierra</li>
+                </ol>
+            </nav>
+            <h1 id="tituloPrincipal"><span class="icono iconoTierra" aria-hidden="true"></span> Tierra</h1>
+            <p class="heroTexto">Actividades en cuevas, paredes de roca, desiertos y alta montaña de Boyacá.</p>
+            <p class="heroDatos">13 lugares en 4 regiones</p>
+        </section>
+
+        <section class="filtros" aria-labelledby="tituloFiltros">
+            <h2 id="tituloFiltros">Filtrar por región</h2>
+            <ul class="listaFiltros">
+                <li><button type="button" class="chipFiltro" aria-pressed="true">Todas (13)</button></li>
+                <li><button type="button" class="chipFiltro" aria-pressed="false">Centro (1)</button></li>
+                <li><button type="button" class="chipFiltro" aria-pressed="false">Sugamuxi (2)</button></li>
+                <li><button type="button" class="chipFiltro" aria-pressed="false">Ricaurte (9)</button></li>
+                <li><button type="button" class="chipFiltro" aria-pressed="false">Gutiérrez (1)</button></li>
+            </ul>
+        </section>
+
+        <section class="lugares" aria-labelledby="tituloLugares">
+            <h2 id="tituloLugares" class="soloLectores">Lugares de tierra</h2>
+            <ul class="listaLugares">
+
+                <!-- REVISAR: las rutas de imagen (../assets/img/tierra/*.jpg) y los textos alt son
+                     provisionales. La carpeta assets/ aún no existe; cambiar por las fotos reales. -->
+
+                <li>
+                    <article class="tarjetaLugar">
+                        <figure class="tarjetaFoto">
+                            <img src="../assets/img/tierra/cucaita-parque-escalada.jpg" alt="Pared de escalada en el Parque de escalada Cucaita">
+                        </figure>
+                        <h3>Parque de escalada Cucaita</h3>
+                        <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Cucaita</p>
+                        <p class="lugarActividades">Escalada en roca</p>
+                        <ul class="listaEtiquetas">
+                            <li class="etiquetaDificultad"><span class="barrasDificultad" aria-hidden="true"></span> Intermedio-avanzado</li>
+                            <li class="etiquetaRegion">Centro</li>
+                        </ul>
+                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Parque de escalada Cucaita</span> <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjetaLugar">
+                        <figure class="tarjetaFoto">
+                            <img src="../assets/img/tierra/lago-de-tota-senderos.jpg" alt="Sendero junto al Lago de Tota">
+                        </figure>
+                        <h3>Senderos del Lago de Tota</h3>
+                        <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Aquitania – Tota – Cuítiva</p>
+                        <p class="lugarActividades">Ciclomontañismo y senderismo</p>
+                        <ul class="listaEtiquetas">
+                            <li class="etiquetaDificultad"><span class="barrasDificultad" aria-hidden="true"></span> Principiante-intermedio</li>
+                            <li class="etiquetaRegion">Sugamuxi</li>
+                            <li class="etiquetaTambien">También: Agua</li>
+                        </ul>
+                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Senderos del Lago de Tota</span> <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjetaLugar">
+                        <figure class="tarjetaFoto">
+                            <img src="../assets/img/tierra/escalada-topaga.jpg" alt="Escalada en roca en Tópaga">
+                        </figure>
+                        <h3>Escalada en Tópaga (Puente Reyes)</h3>
+                        <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Tópaga</p>
+                        <p class="lugarActividades">Escalada en roca</p>
+                        <ul class="listaEtiquetas">
+                            <li class="etiquetaDificultad"><span class="barrasDificultad" aria-hidden="true"></span> Intermedio-avanzado</li>
+                            <li class="etiquetaRegion">Sugamuxi</li>
+                        </ul>
+                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Escalada en Tópaga (Puente Reyes)</span> <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjetaLugar">
+                        <figure class="tarjetaFoto">
+                            <img src="../assets/img/tierra/cascada-cueva-hayal.jpg" alt="Cascada y entrada de la cueva del Hayal en Santa Sofía">
+                        </figure>
+                        <h3>Cascada y Cueva del Hayal</h3>
+                        <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Santa Sofía</p>
+                        <p class="lugarActividades">Espeleología y senderismo</p>
+                        <ul class="listaEtiquetas">
+                            <li class="etiquetaDificultad"><span class="barrasDificultad" aria-hidden="true"></span> Intermedio</li>
+                            <li class="etiquetaRegion">Ricaurte</li>
+                        </ul>
+                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Cascada y Cueva del Hayal</span> <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjetaLugar">
+                        <figure class="tarjetaFoto">
+                            <img src="../assets/img/tierra/cueva-rubio.jpg" alt="Entrada de la Cueva Rubio en Chitaraque">
+                        </figure>
+                        <h3>Cueva Rubio</h3>
+                        <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Chitaraque</p>
+                        <p class="lugarActividades">Espeleología</p>
+                        <ul class="listaEtiquetas">
+                            <li class="etiquetaDificultad"><span class="barrasDificultad" aria-hidden="true"></span> Intermedio-avanzado</li>
+                            <li class="etiquetaRegion">Ricaurte</li>
+                            <li class="etiquetaTambien">También: Agua</li>
+                        </ul>
+                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Cueva Rubio</span> <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjetaLugar">
+                        <figure class="tarjetaFoto">
+                            <img src="../assets/img/tierra/cueva-de-la-fabrica.jpg" alt="Interior de la Cueva de la Fábrica con río subterráneo">
+                        </figure>
+                        <h3>Cueva de la Fábrica</h3>
+                        <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Vía Villa de Leyva – Santa Sofía</p>
+                        <p class="lugarActividades">Espeleología en cueva de río subterráneo</p>
+                        <ul class="listaEtiquetas">
+                            <li class="etiquetaDificultad"><span class="barrasDificultad" aria-hidden="true"></span> Principiante-intermedio</li>
+                            <li class="etiquetaRegion">Ricaurte</li>
+                        </ul>
+                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Cueva de la Fábrica</span> <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjetaLugar">
+                        <figure class="tarjetaFoto">
+                            <img src="../assets/img/tierra/desierto-la-candelaria.jpg" alt="Paredes de roca en el Desierto de La Candelaria">
+                        </figure>
+                        <h3>Desierto de La Candelaria</h3>
+                        <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Villa de Leyva – Sáchica – Ráquira</p>
+                        <p class="lugarActividades">Escalada en roca</p>
+                        <ul class="listaEtiquetas">
+                            <li class="etiquetaDificultad"><span class="barrasDificultad" aria-hidden="true"></span> Principiante-intermedio</li>
+                            <li class="etiquetaRegion">Ricaurte</li>
+                        </ul>
+                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Desierto de La Candelaria</span> <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjetaLugar">
+                        <figure class="tarjetaFoto">
+                            <img src="../assets/img/tierra/ecoparque-el-hayal.jpg" alt="Sendero del Ecoparque El Hayal en Santa Sofía">
+                        </figure>
+                        <h3>Ecoparque El Hayal</h3>
+                        <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Santa Sofía</p>
+                        <p class="lugarActividades">Senderismo, cueva y ascensos</p>
+                        <ul class="listaEtiquetas">
+                            <li class="etiquetaDificultad"><span class="barrasDificultad" aria-hidden="true"></span> Principiante-intermedio</li>
+                            <li class="etiquetaRegion">Ricaurte</li>
+                        </ul>
+                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Ecoparque El Hayal</span> <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjetaLugar">
+                        <figure class="tarjetaFoto">
+                            <img src="../assets/img/tierra/gachantiva-santa-sofia.jpg" alt="Cueva del Indio en la zona de Gachantivá y Santa Sofía">
+                        </figure>
+                        <h3>Gachantivá y Santa Sofía</h3>
+                        <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Cerca de Villa de Leyva</p>
+                        <p class="lugarActividades">Espeleología (Cueva del Indio, entre otras)</p>
+                        <ul class="listaEtiquetas">
+                            <li class="etiquetaDificultad"><span class="barrasDificultad" aria-hidden="true"></span> Intermedio</li>
+                            <li class="etiquetaRegion">Ricaurte</li>
+                        </ul>
+                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Gachantivá y Santa Sofía</span> <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjetaLugar">
+                        <figure class="tarjetaFoto">
+                            <img src="../assets/img/tierra/hoyo-del-aire.jpg" alt="Rápel vertical en el Hoyo del Aire">
+                        </figure>
+                        <h3>Hoyo del Aire / Hoyo de la Romera</h3>
+                        <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Vía Villa de Leyva – Moniquirá</p>
+                        <p class="lugarActividades">Rápel vertical, espeleología y escalada</p>
+                        <ul class="listaEtiquetas">
+                            <li class="etiquetaDificultad"><span class="barrasDificultad" aria-hidden="true"></span> Avanzado</li>
+                            <li class="etiquetaRegion">Ricaurte</li>
+                        </ul>
+                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Hoyo del Aire / Hoyo de la Romera</span> <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjetaLugar">
+                        <figure class="tarjetaFoto">
+                            <img src="../assets/img/tierra/cueva-del-nitrato.jpg" alt="Entrada de la Cueva del Nitrato en Moniquirá">
+                        </figure>
+                        <h3>Cueva del Nitrato</h3>
+                        <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Moniquirá</p>
+                        <p class="lugarActividades">Espeleología y senderismo selvático</p>
+                        <ul class="listaEtiquetas">
+                            <li class="etiquetaDificultad"><span class="barrasDificultad" aria-hidden="true"></span> Intermedio-avanzado</li>
+                            <li class="etiquetaRegion">Ricaurte</li>
+                            <li class="etiquetaTambien">También: Agua</li>
+                        </ul>
+                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Cueva del Nitrato</span> <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjetaLugar">
+                        <figure class="tarjetaFoto">
+                            <img src="../assets/img/tierra/desierto-tatacoita.jpg" alt="Ciclomontañismo en el Desierto de la Tatacoita">
+                        </figure>
+                        <h3>Desierto de la Tatacoita</h3>
+                        <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Sáchica</p>
+                        <p class="lugarActividades">Ciclomontañismo de descenso y cuatrimotos</p>
+                        <ul class="listaEtiquetas">
+                            <li class="etiquetaDificultad"><span class="barrasDificultad" aria-hidden="true"></span> Intermedio</li>
+                            <li class="etiquetaRegion">Ricaurte</li>
+                        </ul>
+                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Desierto de la Tatacoita</span> <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="tarjetaLugar">
+                        <figure class="tarjetaFoto">
+                            <img src="../assets/img/tierra/pnn-el-cocuy.jpg" alt="Nevados del Parque Nacional Natural El Cocuy">
+                        </figure>
+                        <h3>PNN El Cocuy</h3>
+                        <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> El Cocuy – Güicán</p>
+                        <p class="lugarActividades">Trekking de alta montaña (más de 4.500 m) y escalada en roca y nieve</p>
+                        <ul class="listaEtiquetas">
+                            <li class="etiquetaDificultad"><span class="barrasDificultad" aria-hidden="true"></span> Avanzado</li>
+                            <li class="etiquetaRegion">Gutiérrez</li>
+                        </ul>
+                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de PNN El Cocuy</span> <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+
+            </ul>
+        </section>
+
+        <section class="bandaBuzon" aria-labelledby="tituloBandaBuzon">
+            <span class="icono iconoCorreo" aria-hidden="true"></span>
+            <div>
+                <h2 id="tituloBandaBuzon">¿Echas de menos un lugar?</h2>
+                <p>Cuéntanos qué lugar o actividad deberíamos agregar, o si algún dato está desactualizado.</p>
+            </div>
+            <a class="boton botonOscuro" href="buzon.html">Ir al buzón</a>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="pieMarca">
+            <p class="pieNombre">SumercExtreme</p>
+            <p>Información de turismo extremo en Boyacá, organizada por elemento: agua, tierra y viento.</p>
+            <p class="pieAviso">Proyecto académico informativo. No vende ni reserva actividades.</p>
+        </div>
+
+        <section class="pieContacto" aria-labelledby="pieTituloContacto">
+            <h2 id="pieTituloContacto">Contacto</h2>
+            <ul>
+                <li><span class="icono iconoCorreo" aria-hidden="true"></span> Correo del proyecto</li>
+                <li><span class="icono iconoUbicacion" aria-hidden="true"></span> Sogamoso, Boyacá</li>
+                <li><span class="icono iconoCorreo" aria-hidden="true"></span> <a href="buzon.html">Escríbenos en el buzón</a></li>
+            </ul>
+        </section>
+
+        <nav class="pieEnlaces" aria-labelledby="pieTituloEnlaces">
+            <h2 id="pieTituloEnlaces">Enlaces</h2>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="misLugares.html">Mis lugares</a></li>
+                <li><a href="buzon.html">Buzón</a></li>
+                <li><a href="accesibilidad.html">Accesibilidad</a></li>
+            </ul>
+        </nav>
+
+        <div class="pieLinea">
+            <p>2026 SumercExtreme · Proyecto integrador 2026-II</p>
+            <p>Fuente principal de datos: SITUR Boyacá</p>
+        </div>
+    </footer>
+
+    <a class="botonAccesibilidad" href="accesibilidad.html">
+        <span class="icono iconoAccesibilidad" aria-hidden="true"></span> Accesibilidad
+    </a>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lago de Tota | SumercExtreme</title>
+    <meta name="description" content="Dificultad, seguridad, precio aproximado y cómo llegar al Lago de Tota, en Boyacá.">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="paginaLugar temaAgua">
+
+    <a class="saltarContenido" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="encabezado">
+        <a class="logo" href="../index.html">
+            <span class="logoCirculos" aria-hidden="true"></span>
+            <span class="logoTexto">SumercExtreme</span>
+        </a>
+
+        <nav aria-label="Principal">
+            <ul class="menuElementos">
+                <li><a href="agua.html" aria-current="true"><span class="icono iconoAgua" aria-hidden="true"></span>Agua</a></li>
+                <li><a href="tierra.html"><span class="icono iconoTierra" aria-hidden="true"></span>Tierra</a></li>
+                <li><a href="viento.html"><span class="icono iconoViento" aria-hidden="true"></span>Viento</a></li>
+            </ul>
+            <ul class="menuAcciones">
+                <li><a class="boton botonBorde" href="misLugares.html">Mis lugares</a></li>
+                <li><a class="boton botonAmarillo" href="buzon.html">Buzón</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+
+        <section class="hero heroLugar" aria-labelledby="tituloPrincipal">
+            <nav class="migasPan" aria-label="Ruta de navegación">
+                <ol>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="agua.html">Agua</a></li>
+                    <li aria-current="page">Lago de Tota</li>
+                </ol>
+            </nav>
+            <h1 id="tituloPrincipal">Lago de Tota</h1>
+            <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Aquitania – Tota – Cuítiva</p>
+            <ul class="listaEtiquetas">
+                <li class="etiquetaDificultad"><span class="barrasDificultad" aria-hidden="true"></span> Principiante-intermedio</li>
+                <li class="etiquetaRegion">Sugamuxi</li>
+                <li class="etiquetaTambien">También: Tierra</li>
+            </ul>
+        </section>
+
+        <div class="contenidoLugar">
+
+            <section class="galeria" aria-labelledby="tituloGaleria">
+                <h2 id="tituloGaleria" class="soloLectores">Fotos y video del lugar</h2>
+
+                <figure class="fotoPrincipal">
+                    <!-- PENDIENTE: elegir la foto real; ajustar el alt a lo que se vea en ella -->
+                    <img src="../assets/img/agua/lago-de-tota-1.jpg" alt="Vista general del Lago de Tota">
+                    <figcaption>Lago de Tota</figcaption>
+                </figure>
+
+                <ul class="listaMiniaturas">
+                    <li><img src="../assets/img/agua/lago-de-tota-2.jpg" alt="Segunda vista del Lago de Tota"></li>
+                    <li><img src="../assets/img/agua/lago-de-tota-3.jpg" alt="Tercera vista del Lago de Tota"></li>
+                </ul>
+
+                <!-- PENDIENTE: video real. Debe llevar subtítulos (WCAG 1.2.2); cuando exista el archivo
+                     .vtt, agregar dentro del video: <track kind="captions" src="..." srclang="es" label="Español"> -->
+                <video class="videoLugar" controls preload="none" poster="../assets/img/agua/lago-de-tota-1.jpg">
+                    <source src="../assets/video/lago-de-tota.mp4" type="video/mp4">
+                    Tu navegador no puede reproducir este video.
+                </video>
+            </section>
+
+            <aside class="resumenLugar" aria-labelledby="tituloResumen">
+                <h2 id="tituloResumen">Resumen</h2>
+                <dl class="listaDatos">
+                    <div class="datoLugar">
+                        <dt>Dificultad</dt>
+                        <dd><span class="barrasDificultad" aria-hidden="true"></span> Principiante-intermedio</dd>
+                    </div>
+                    <div class="datoLugar">
+                        <dt>Precio aproximado</dt>
+                        <!-- PENDIENTE: valor aproximado verificado (fuente: SITUR u operador) -->
+                        <dd>Por confirmar</dd>
+                    </div>
+                    <div class="datoLugar">
+                        <dt>Región</dt>
+                        <dd>Sugamuxi</dd>
+                    </div>
+                    <div class="datoLugar">
+                        <dt>Municipios</dt>
+                        <dd>Aquitania – Tota – Cuítiva</dd>
+                    </div>
+                </dl>
+
+                <!-- VERIFICAR en el Figma si el control de "visitado" también va en esta página -->
+                <div class="marcarVisitado">
+                    <input type="checkbox" id="marcarVisitado" name="marcarVisitado">
+                    <label for="marcarVisitado">Marcar como visitado</label>
+                </div>
+            </aside>
+
+        </div>
+
+        <section class="seccionLugar" aria-labelledby="tituloActividades">
+            <h2 id="tituloActividades">Qué puedes hacer aquí</h2>
+            <ul class="listaEtiquetas">
+                <li class="etiquetaActividad">Kayak</li>
+                <li class="etiquetaActividad">Windsurf</li>
+                <li class="etiquetaActividad">Vela</li>
+                <li class="etiquetaActividad">Stand-up paddle</li>
+                <li class="etiquetaActividad">Buceo de altitud</li>
+            </ul>
+        </section>
+
+        <section class="seccionLugar cajaSeguridad" aria-labelledby="tituloSeguridad">
+            <h2 id="tituloSeguridad">Condiciones de seguridad</h2>
+            <!-- PENDIENTE: completar cada dato con información verificada de fuentes oficiales -->
+            <dl class="listaDatos">
+                <div class="datoLugar"><dt>Edad mínima</dt><dd>Por confirmar</dd></div>
+                <div class="datoLugar"><dt>Condición física</dt><dd>Por confirmar</dd></div>
+                <div class="datoLugar"><dt>Equipo necesario</dt><dd>Por confirmar</dd></div>
+                <div class="datoLugar"><dt>Riesgos</dt><dd>Por confirmar</dd></div>
+                <div class="datoLugar"><dt>Acompañamiento de guías</dt><dd>Por confirmar</dd></div>
+                <div class="datoLugar"><dt>Seguros</dt><dd>Por confirmar</dd></div>
+            </dl>
+        </section>
+
+        <section class="seccionLugar" aria-labelledby="tituloComoLlegar">
+            <h2 id="tituloComoLlegar">Cómo llegar</h2>
+            <!-- PENDIENTE: el Cuestionario 1 pidió mapa interactivo. Decidir si se usa un <iframe>
+                 de OpenStreetMap (necesita internet en la sustentación) o una imagen del mapa. -->
+            <figure class="mapaLugar">
+                <img src="../assets/img/agua/mapa-lago-de-tota.jpg" alt="Mapa con la ubicación del Lago de Tota entre Aquitania, Tota y Cuítiva">
+                <figcaption>Aquitania – Tota – Cuítiva, Boyacá</figcaption>
+            </figure>
+        </section>
+
+        <!-- VERIFICAR en el Figma: bloque que enlaza al mismo lugar en otro elemento -->
+        <section class="bandaTambien" aria-labelledby="tituloTambien">
+            <div>
+                <h2 id="tituloTambien">También en este lugar: Tierra</h2>
+                <p>Este lugar tiene actividades de otro elemento.</p>
+            </div>
+            <a class="boton botonOscuro" href="tierra.html">Ver en Tierra</a>
+        </section>
+
+        <p class="volver"><a href="agua.html"><span aria-hidden="true">←</span> Volver a Agua</a></p>
+
+        <section class="bandaBuzon" aria-labelledby="tituloBandaBuzon">
+            <span class="icono iconoCorreo" aria-hidden="true"></span>
+            <div>
+                <h2 id="tituloBandaBuzon">¿Echas de menos un lugar?</h2>
+                <p>Cuéntanos qué lugar o actividad deberíamos agregar, o si algún dato está desactualizado.</p>
+            </div>
+            <a class="boton botonOscuro" href="buzon.html">Ir al buzón</a>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="pieMarca">
+            <p class="pieNombre">SumercExtreme</p>
+            <p>Información de turismo extremo en Boyacá, organizada por elemento: agua, tierra y viento.</p>
+            <p class="pieAviso">Proyecto académico informativo. No vende ni reserva actividades.</p>
+        </div>
+
+        <section class="pieContacto" aria-labelledby="pieTituloContacto">
+            <h2 id="pieTituloContacto">Contacto</h2>
+            <ul>
+                <li><span class="icono iconoCorreo" aria-hidden="true"></span> Correo del proyecto</li>
+                <li><span class="icono iconoUbicacion" aria-hidden="true"></span> Sogamoso, Boyacá</li>
+                <li><span class="icono iconoCorreo" aria-hidden="true"></span> <a href="buzon.html">Escríbenos en el buzón</a></li>
+            </ul>
+        </section>
+
+        <nav class="pieEnlaces" aria-labelledby="pieTituloEnlaces">
+            <h2 id="pieTituloEnlaces">Enlaces</h2>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="misLugares.html">Mis lugares</a></li>
+                <li><a href="buzon.html">Buzón</a></li>
+                <li><a href="accesibilidad.html">Accesibilidad</a></li>
+            </ul>
+        </nav>
+
+        <div class="pieLinea">
+            <p>2026 SumercExtreme · Proyecto integrador 2026-II</p>
+            <p>Fuente principal de datos: SITUR Boyacá</p>
+        </div>
+    </footer>
+
+    <a class="botonAccesibilidad" href="accesibilidad.html">
+        <span class="icono iconoAccesibilidad" aria-hidden="true"></span> Accesibilidad
+    </a>
+
+</body>
+</html>

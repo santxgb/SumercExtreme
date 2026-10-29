@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buzón de sugerencias | SumercExtreme</title>
+    <meta name="description" content="Cuéntanos qué lugar o actividad de turismo extremo en Boyacá falta, o qué dato cambió.">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="paginaBuzon">
+
+    <a class="saltarContenido" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="encabezado">
+        <a class="logo" href="../index.html">
+            <span class="logoCirculos" aria-hidden="true"></span>
+            <span class="logoTexto">SumercExtreme</span>
+        </a>
+
+        <nav aria-label="Principal">
+            <ul class="menuElementos">
+                <li><a href="agua.html"><span class="icono iconoAgua" aria-hidden="true"></span>Agua</a></li>
+                <li><a href="tierra.html"><span class="icono iconoTierra" aria-hidden="true"></span>Tierra</a></li>
+                <li><a href="viento.html"><span class="icono iconoViento" aria-hidden="true"></span>Viento</a></li>
+            </ul>
+            <ul class="menuAcciones">
+                <li><a class="boton botonBorde" href="misLugares.html">Mis lugares</a></li>
+                <li><a class="boton botonAmarillo" href="buzon.html" aria-current="page">Buzón</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+
+        <section class="hero" aria-labelledby="tituloPrincipal">
+            <h1 id="tituloPrincipal">Buzón de sugerencias</h1>
+            <p class="heroTexto">¿Conoces un lugar que falta o un dato que cambió? Cuéntanos. Leemos todas las sugerencias para mejorar la información.</p>
+        </section>
+
+        <div class="contenidoBuzon">
+
+            <!-- El sitio no tiene servidor: al enviar, el formulario solo lleva a la página de confirmación -->
+            <form class="formulario" action="buzonEnviado.html" method="get">
+                <p class="formularioNota">Los campos con * son obligatorios.</p>
+
+                <fieldset class="campo">
+                    <legend>Tipo de sugerencia *</legend>
+                    <div class="opcion">
+                        <input type="radio" id="tipoNuevo" name="tipo" value="nuevo" required checked>
+                        <label for="tipoNuevo">Agregar un lugar o actividad nueva</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="tipoCorregir" name="tipo" value="corregir">
+                        <label for="tipoCorregir">Corregir información de un lugar</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="radio" id="tipoOtra" name="tipo" value="otra">
+                        <label for="tipoOtra">Otra idea para la página</label>
+                    </div>
+                </fieldset>
+
+                <div class="campo">
+                    <label for="elemento">Elemento relacionado</label>
+                    <p class="campoAyuda" id="ayudaElemento">Opcional.</p>
+                    <select id="elemento" name="elemento" aria-describedby="ayudaElemento">
+                        <option value="">Selecciona: Agua, Tierra o Viento</option>
+                        <option value="agua">Agua</option>
+                        <option value="tierra">Tierra</option>
+                        <option value="viento">Viento</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="nombreLugar">Nombre del lugar</label>
+                    <p class="campoAyuda" id="ayudaNombreLugar">Opcional. Ejemplo: Cascada La Periquera.</p>
+                    <input type="text" id="nombreLugar" name="nombreLugar" placeholder="Escribe el nombre del lugar" aria-describedby="ayudaNombreLugar">
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Tu mensaje *</label>
+                    <p class="campoAyuda" id="ayudaMensaje">Cuéntanos con tus palabras. Mínimo 10 caracteres.</p>
+                    <textarea id="mensaje" name="mensaje" rows="5" minlength="10" required placeholder="Escribe aquí tu sugerencia…" aria-describedby="ayudaMensaje"></textarea>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <p class="campoAyuda" id="ayudaCorreo">Opcional. Solo si quieres que te respondamos.</p>
+                    <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" autocomplete="email" aria-describedby="ayudaCorreo">
+                </div>
+
+                <div class="formularioBotones">
+                    <button type="submit" class="boton">Enviar sugerencia</button>
+                    <button type="reset" class="boton botonBorde">Borrar formulario</button>
+                </div>
+            </form>
+
+            <aside class="cajaInfo" aria-labelledby="tituloQuePasa">
+                <span class="icono iconoCorreo" aria-hidden="true"></span>
+                <h2 id="tituloQuePasa">¿Qué pasa con tu sugerencia?</h2>
+                <ul>
+                    <li>El equipo la revisa y verifica la información con fuentes oficiales como SITUR Boyacá.</li>
+                    <li>Si es un lugar nuevo, lo agregamos al elemento que corresponda.</li>
+                    <li>No publicamos tu nombre ni tu correo.</li>
+                </ul>
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer class="pie">
+        <div class="pieMarca">
+            <p class="pieNombre">SumercExtreme</p>
+            <p>Información de turismo extremo en Boyacá, organizada por elemento: agua, tierra y viento.</p>
+            <p class="pieAviso">Proyecto académico informativo. No vende ni reserva actividades.</p>
+        </div>
+
+        <section class="pieContacto" aria-labelledby="pieTituloContacto">
+            <h2 id="pieTituloContacto">Contacto</h2>
+            <ul>
+                <li><span class="icono iconoCorreo" aria-hidden="true"></span> Correo del proyecto</li>
+                <li><span class="icono iconoUbicacion" aria-hidden="true"></span> Sogamoso, Boyacá</li>
+                <li><span class="icono iconoCorreo" aria-hidden="true"></span> <a href="buzon.html">Escríbenos en el buzón</a></li>
+            </ul>
+        </section>
+
+        <nav class="pieEnlaces" aria-labelledby="pieTituloEnlaces">
+            <h2 id="pieTituloEnlaces">Enlaces</h2>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="misLugares.html">Mis lugares</a></li>
+                <li><a href="buzon.html" aria-current="page">Buzón</a></li>
+                <li><a href="accesibilidad.html">Accesibilidad</a></li>
+            </ul>
+        </nav>
+
+        <div class="pieLinea">
+            <p>2026 SumercExtreme · Proyecto integrador 2026-II</p>
+            <p>Fuente principal de datos: SITUR Boyacá</p>
+        </div>
+    </footer>
+
+    <a class="botonAccesibilidad" href="accesibilidad.html">
+        <span class="icono iconoAccesibilidad" aria-hidden="true"></span> Accesibilidad
+    </a>
+
+</body>
+</html>

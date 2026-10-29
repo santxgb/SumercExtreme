@@ -40,113 +40,122 @@
                 </ol>
             </nav>
             <h1 id="tituloPrincipal">Lago de Tota</h1>
-            <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Aquitania – Tota – Cuítiva</p>
+            <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Aquitania, Tota y Cuítiva · Provincia de Sugamuxi</p>
             <ul class="listaEtiquetas">
-                <li class="etiquetaDificultad"><span class="barrasDificultad" aria-hidden="true"></span> Principiante-intermedio</li>
-                <li class="etiquetaRegion">Sugamuxi</li>
-                <li class="etiquetaTambien">También: Tierra</li>
+                <li class="etiquetaElemento etiquetaAgua"><span class="icono iconoAgua" aria-hidden="true"></span> Agua</li>
+                <li class="etiquetaElemento etiquetaTierra"><span class="icono iconoTierra" aria-hidden="true"></span> También Tierra</li>
             </ul>
         </section>
 
         <div class="contenidoLugar">
 
-            <section class="galeria" aria-labelledby="tituloGaleria">
-                <h2 id="tituloGaleria" class="soloLectores">Fotos y video del lugar</h2>
+            <div class="columnaPrincipal">
 
-                <figure class="fotoPrincipal">
-                    <!-- PENDIENTE: elegir la foto real; ajustar el alt a lo que se vea en ella -->
-                    <img src="../assets/img/agua/lago-de-tota-1.jpg" alt="Vista general del Lago de Tota">
-                    <figcaption>Lago de Tota</figcaption>
-                </figure>
+                <section class="galeria" aria-labelledby="tituloGaleria">
+                    <h2 id="tituloGaleria" class="soloLectores">Fotos y video del lugar</h2>
 
-                <ul class="listaMiniaturas">
-                    <li><img src="../assets/img/agua/lago-de-tota-2.jpg" alt="Segunda vista del Lago de Tota"></li>
-                    <li><img src="../assets/img/agua/lago-de-tota-3.jpg" alt="Tercera vista del Lago de Tota"></li>
-                </ul>
+                    <!-- PENDIENTE: fotos reales; ajustar cada alt a lo que se vea en la foto -->
+                    <figure class="fotoPrincipal">
+                        <img src="../assets/img/agua/lago-de-tota-kayak.jpg" alt="Kayak en el Lago de Tota">
+                    </figure>
 
-                <!-- PENDIENTE: video real. Debe llevar subtítulos (WCAG 1.2.2); cuando exista el archivo
-                     .vtt, agregar dentro del video: <track kind="captions" src="..." srclang="es" label="Español"> -->
-                <video class="videoLugar" controls preload="none" poster="../assets/img/agua/lago-de-tota-1.jpg">
-                    <source src="../assets/video/lago-de-tota.mp4" type="video/mp4">
-                    Tu navegador no puede reproducir este video.
-                </video>
-            </section>
+                    <ul class="listaMiniaturas">
+                        <li><img src="../assets/img/agua/lago-de-tota-windsurf.jpg" alt="Windsurf en el Lago de Tota"></li>
+                        <li><img src="../assets/img/agua/lago-de-tota-playa-blanca.jpg" alt="Playa Blanca, en el Lago de Tota"></li>
+                        <li>
+                            <!-- PENDIENTE: video real. Debe llevar subtítulos (WCAG 1.2.2); cuando exista el archivo
+                                 .vtt, agregar dentro del video: <track kind="captions" src="..." srclang="es" label="Español"> -->
+                            <video class="videoLugar" controls preload="none" poster="../assets/img/agua/lago-de-tota-kayak.jpg">
+                                <source src="../assets/video/lago-de-tota.mp4" type="video/mp4">
+                                Tu navegador no puede reproducir este video.
+                            </video>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="seccionLugar" aria-labelledby="tituloActividades">
+                    <h2 id="tituloActividades">Qué puedes hacer aquí</h2>
+                    <ul class="listaEtiquetas">
+                        <li class="etiquetaActividad">Kayak</li>
+                        <li class="etiquetaActividad">Windsurf</li>
+                        <li class="etiquetaActividad">Navegación a vela</li>
+                        <li class="etiquetaActividad">Stand-up paddle</li>
+                        <li class="etiquetaActividad">Buceo de altitud</li>
+                    </ul>
+                    <p class="avisoLugar"><span class="icono iconoAlerta" aria-hidden="true"></span> El buceo de altitud es de nivel avanzado y requiere certificación previa.</p>
+                </section>
+
+                <section class="seccionLugar cajaSeguridad" aria-labelledby="tituloSeguridad">
+                    <h2 id="tituloSeguridad"><span class="icono iconoEscudo" aria-hidden="true"></span> Condiciones de seguridad</h2>
+                    <ul class="listaCheck">
+                        <li>Usa siempre chaleco salvavidas en las actividades sobre el agua.</li>
+                        <li>El lago está a más de 3.000 m de altitud: el agua es muy fría y el clima cambia rápido. Lleva ropa térmica.</li>
+                        <li>Practica las actividades con operadores registrados en SITUR Boyacá.</li>
+                        <li>Si no sabes nadar, infórmalo al guía antes de empezar.</li>
+                    </ul>
+                    <p class="notaFuente">[Contenido de seguridad a validar con fuentes oficiales]</p>
+                </section>
+
+                <section class="seccionLugar" aria-labelledby="tituloComoLlegar">
+                    <h2 id="tituloComoLlegar">Cómo llegar</h2>
+                    <!-- PENDIENTE: el Cuestionario 1 pidió mapa interactivo. Decidir si se usa un <iframe>
+                         de OpenStreetMap (necesita internet en la sustentación) o una imagen del mapa. -->
+                    <figure class="mapaLugar">
+                        <img src="../assets/img/agua/mapa-lago-de-tota.jpg" alt="Mapa con la ubicación del Lago de Tota entre Aquitania, Tota y Cuítiva">
+                        <figcaption>Aquitania, Tota y Cuítiva, Boyacá</figcaption>
+                    </figure>
+                </section>
+
+                <section class="bandaTambien temaTierra" aria-labelledby="tituloTambien">
+                    <span class="icono iconoTierra" aria-hidden="true"></span>
+                    <div>
+                        <h2 id="tituloTambien">También en este lugar: Tierra</h2>
+                        <p>Ciclomontañismo y senderismo por los senderos que rodean el lago.</p>
+                    </div>
+                    <a class="boton botonAmarillo" href="tierra.html">Ver en Tierra</a>
+                </section>
+
+                <p class="volver"><a class="boton botonBorde" href="agua.html"><span aria-hidden="true">←</span> Volver a Agua</a></p>
+
+            </div>
 
             <aside class="resumenLugar" aria-labelledby="tituloResumen">
-                <h2 id="tituloResumen">Resumen</h2>
+                <h2 id="tituloResumen" class="soloLectores">Resumen del lugar</h2>
                 <dl class="listaDatos">
                     <div class="datoLugar">
                         <dt>Dificultad</dt>
-                        <dd><span class="barrasDificultad" aria-hidden="true"></span> Principiante-intermedio</dd>
+                        <dd>
+                            <p class="datoValor"><span class="barrasDificultad" aria-hidden="true"></span> Principiante–intermedio</p>
+                            <p class="datoAyuda">Apto para personas sin experiencia, con guía.</p>
+                        </dd>
                     </div>
                     <div class="datoLugar">
                         <dt>Precio aproximado</dt>
-                        <!-- PENDIENTE: valor aproximado verificado (fuente: SITUR u operador) -->
-                        <dd>Por confirmar</dd>
+                        <dd>
+                            <!-- PENDIENTE: valor aproximado verificado (fuente: SITUR u operador) -->
+                            <p class="datoValor datoPrecio">[Por confirmar]</p>
+                            <p class="datoAyuda">Valor de referencia por persona. Confírmalo con el operador antes de ir.</p>
+                        </dd>
                     </div>
                     <div class="datoLugar">
-                        <dt>Región</dt>
-                        <dd>Sugamuxi</dd>
-                    </div>
-                    <div class="datoLugar">
-                        <dt>Municipios</dt>
-                        <dd>Aquitania – Tota – Cuítiva</dd>
+                        <dt>Ubicación</dt>
+                        <dd>
+                            <p class="datoValor">Aquitania, Tota y Cuítiva</p>
+                            <p class="datoAyuda">Región Sugamuxi, centro-sur de Boyacá</p>
+                        </dd>
                     </div>
                 </dl>
 
-                <!-- VERIFICAR en el Figma si el control de "visitado" también va en esta página -->
                 <div class="marcarVisitado">
                     <input type="checkbox" id="marcarVisitado" name="marcarVisitado">
                     <label for="marcarVisitado">Marcar como visitado</label>
                 </div>
+
+                <p><a class="enlaceReportar" href="buzon.html">¿Algún dato está mal? Escríbenos</a></p>
+                <p class="notaFuente">Fuente: SITUR Boyacá</p>
             </aside>
 
         </div>
-
-        <section class="seccionLugar" aria-labelledby="tituloActividades">
-            <h2 id="tituloActividades">Qué puedes hacer aquí</h2>
-            <ul class="listaEtiquetas">
-                <li class="etiquetaActividad">Kayak</li>
-                <li class="etiquetaActividad">Windsurf</li>
-                <li class="etiquetaActividad">Vela</li>
-                <li class="etiquetaActividad">Stand-up paddle</li>
-                <li class="etiquetaActividad">Buceo de altitud</li>
-            </ul>
-        </section>
-
-        <section class="seccionLugar cajaSeguridad" aria-labelledby="tituloSeguridad">
-            <h2 id="tituloSeguridad">Condiciones de seguridad</h2>
-            <!-- PENDIENTE: completar cada dato con información verificada de fuentes oficiales -->
-            <dl class="listaDatos">
-                <div class="datoLugar"><dt>Edad mínima</dt><dd>Por confirmar</dd></div>
-                <div class="datoLugar"><dt>Condición física</dt><dd>Por confirmar</dd></div>
-                <div class="datoLugar"><dt>Equipo necesario</dt><dd>Por confirmar</dd></div>
-                <div class="datoLugar"><dt>Riesgos</dt><dd>Por confirmar</dd></div>
-                <div class="datoLugar"><dt>Acompañamiento de guías</dt><dd>Por confirmar</dd></div>
-                <div class="datoLugar"><dt>Seguros</dt><dd>Por confirmar</dd></div>
-            </dl>
-        </section>
-
-        <section class="seccionLugar" aria-labelledby="tituloComoLlegar">
-            <h2 id="tituloComoLlegar">Cómo llegar</h2>
-            <!-- PENDIENTE: el Cuestionario 1 pidió mapa interactivo. Decidir si se usa un <iframe>
-                 de OpenStreetMap (necesita internet en la sustentación) o una imagen del mapa. -->
-            <figure class="mapaLugar">
-                <img src="../assets/img/agua/mapa-lago-de-tota.jpg" alt="Mapa con la ubicación del Lago de Tota entre Aquitania, Tota y Cuítiva">
-                <figcaption>Aquitania – Tota – Cuítiva, Boyacá</figcaption>
-            </figure>
-        </section>
-
-        <!-- VERIFICAR en el Figma: bloque que enlaza al mismo lugar en otro elemento -->
-        <section class="bandaTambien" aria-labelledby="tituloTambien">
-            <div>
-                <h2 id="tituloTambien">También en este lugar: Tierra</h2>
-                <p>Este lugar tiene actividades de otro elemento.</p>
-            </div>
-            <a class="boton botonOscuro" href="tierra.html">Ver en Tierra</a>
-        </section>
-
-        <p class="volver"><a href="agua.html"><span aria-hidden="true">←</span> Volver a Agua</a></p>
 
         <section class="bandaBuzon" aria-labelledby="tituloBandaBuzon">
             <span class="icono iconoCorreo" aria-hidden="true"></span>

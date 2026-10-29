@@ -1,0 +1,73 @@
+/* Etiquetas de cada lugar: dificultad, región y "También: ..." */
+
+.listaEtiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 10px;
+}
+
+.listaEtiquetas li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.etiquetaDificultad {
+    border: 1px solid rgba(27, 43, 47, 0.3);
+}
+
+.etiquetaRegion {
+    background-color: #d1eaf0;
+}
+
+.etiquetaTambien {
+    background-color: #d4e157;
+    color: #3e2723;
+}
+
+/* Barras de dificultad: 4 barras de alturas crecientes dibujadas con degradados.
+   La clase nivel1…nivel4 indica cuántas barras se pintan de color. */
+.barrasDificultad {
+    --barra1: rgba(158, 158, 158, 0.4);
+    --barra2: rgba(158, 158, 158, 0.4);
+    --barra3: rgba(158, 158, 158, 0.4);
+    --barra4: rgba(158, 158, 158, 0.4);
+    display: inline-block;
+    flex-shrink: 0;
+    width: 29px;
+    height: 17px;
+    background:
+        linear-gradient(var(--barra1), var(--barra1)) left 0 bottom 0 / 5px 8px,
+        linear-gradient(var(--barra2), var(--barra2)) left 8px bottom 0 / 5px 11px,
+        linear-gradient(var(--barra3), var(--barra3)) left 16px bottom 0 / 5px 14px,
+        linear-gradient(var(--barra4), var(--barra4)) left 24px bottom 0 / 5px 17px;
+    background-repeat: no-repeat;
+}
+
+.nivel1 {
+    --barra1: #00838f;
+}
+
+.nivel2 {
+    --barra1: #00838f;
+    --barra2: #00838f;
+}
+
+.nivel3 {
+    --barra1: #00838f;
+    --barra2: #00838f;
+    --barra3: #00838f;
+}
+
+.nivel4 {
+    --barra1: #00838f;
+    --barra2: #00838f;
+    --barra3: #00838f;
+    --barra4: #00838f;
+}

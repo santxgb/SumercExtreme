@@ -1,0 +1,77 @@
+/* Tarjetas de cada lugar en las páginas de Agua, Tierra y Viento */
+
+.lugares {
+    padding-top: 32px;
+}
+
+/* 3 columnas en escritorio; pasan a 2 y luego a 1 cuando no caben */
+.listaLugares {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-items: start;
+    gap: 36px;
+}
+
+.tarjetaLugar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 22px;
+    overflow: hidden;
+    border: 1px solid rgba(158, 158, 158, 0.45);
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+
+/* Mientras no esté la foto real se ve el recuadro azul claro con el ícono de imagen */
+.tarjetaLugar .tarjetaFoto {
+    height: 170px;
+    margin-bottom: 12px;
+    background: #d1eaf0 url("../../assets/iconos/imagen.svg") center / 36px no-repeat;
+}
+
+.tarjetaLugar > :not(.tarjetaFoto) {
+    margin-right: 22px;
+    margin-left: 22px;
+}
+
+.tarjetaLugar h3 {
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.lugarUbicacion {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+}
+
+.tarjetaLugar .lugarUbicacion .icono {
+    width: 18px;
+    height: 18px;
+}
+
+.enlaceDetalle {
+    align-self: flex-start;
+    padding: 4px 0;
+    color: #00838f;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.enlaceDetalle:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .listaLugares {
+        gap: 24px;
+    }
+
+    .tarjetaLugar h3 {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,61 @@
+/* Filtros por región (botones en forma de píldora) */
+
+.filtros {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-top: 48px;
+}
+
+.filtros h2 {
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.listaFiltros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.chipFiltro {
+    padding: 10px 18px;
+    border: 2px solid #00838f;
+    border-radius: 999px;
+    background-color: #ffffff;
+    color: #00838f;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.chipFiltro:hover {
+    background-color: #d1eaf0;
+}
+
+/* Filtro activo: relleno y con chulo */
+.chipFiltro[aria-pressed="true"] {
+    background-color: #00838f;
+    color: #ffffff;
+}
+
+.chipFiltro[aria-pressed="true"]::before {
+    content: "✓ ";
+}
+
+@media (max-width: 700px) {
+    .filtros {
+        padding-top: 32px;
+    }
+
+    .listaFiltros {
+        gap: 8px;
+    }
+
+    .chipFiltro {
+        padding: 8px 14px;
+        font-size: 15px;
+    }
+}

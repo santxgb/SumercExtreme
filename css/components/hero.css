@@ -63,10 +63,60 @@
     color: #d4e157;
 }
 
+/* ---- Hero de las páginas de elemento (Agua, Tierra y Viento) ---- */
+
+.migasPan ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.migasPan li {
+    display: flex;
+    gap: 10px;
+}
+
+/* Separador "›" entre cada paso de la ruta */
+.migasPan li + li::before {
+    content: "›";
+}
+
+.migasPan a {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.migasPan a:hover {
+    text-decoration: underline;
+}
+
+.heroElemento h1 {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.heroElemento h1 .icono {
+    width: 56px;
+    height: 56px;
+}
+
+.heroDatos {
+    color: #d4e157;
+    font-size: 18px;
+    font-weight: 700;
+}
+
 @media (max-width: 700px) {
     .hero {
         padding-top: 40px;
         padding-bottom: 40px;
+    }
+
+    .heroElemento h1 .icono {
+        width: 40px;
+        height: 40px;
     }
 
     .paginaInicio .hero {

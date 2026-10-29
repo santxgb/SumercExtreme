@@ -1,0 +1,29 @@
+/* Tema Agua: colores del hero en las páginas de Agua */
+
+.temaAgua .hero {
+    background-image:
+        url("../../assets/iconos/decoracionAgua2.svg"),
+        url("../../assets/iconos/decoracionAgua1.svg"),
+        linear-gradient(150deg, #0b1d22 0%, #00838f 44%, #42a5f5 80%);
+    background-position:
+        right -20px top -100px,
+        right -20px top 180px,
+        center;
+    background-size: 360px, 200px, cover;
+    background-repeat: no-repeat;
+}
+
+/* Gota blanca grande junto al título */
+.temaAgua .heroElemento h1 .iconoAgua {
+    background-image: url("../../assets/iconos/aguaHero.svg");
+}
+
+@media (max-width: 700px) {
+    .temaAgua .hero {
+        background-size: 220px, 120px, cover;
+        background-position:
+            right -90px top -80px,
+            right -50px bottom -30px,
+            center;
+    }
+}

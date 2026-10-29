@@ -1,0 +1,52 @@
+/* Estilos generales de todas las páginas: fuente, colores de fondo y márgenes laterales */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f4f7f2;
+    color: #1b2b2f;
+    font-family: "Atkinson Hyperlegible", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+h1, h2, h3, p, ul, ol, figure {
+    margin: 0;
+}
+
+ul, ol {
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+/* Los títulos usan Barlow Condensed, como en el Figma */
+h1, h2 {
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 0.005em;
+}
+
+/* Margen lateral: 120 px en escritorio (contenido de 1200 px) y menos en pantallas pequeñas */
+.encabezado,
+.hero,
+.elementos,
+.comoFunciona,
+.filtros,
+.lugares,
+.pie {
+    padding-left: max(20px, calc((100% - 1200px) / 2));
+    padding-right: max(20px, calc((100% - 1200px) / 2));
+}

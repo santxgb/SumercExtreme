@@ -1,0 +1,17 @@
+/* Archivo principal: el HTML solo enlaza este archivo y desde aquí se cargan los demás.
+   Para agregar estilos de otra página, crear o llenar su archivo y sumarlo a la lista. */
+
+/* Fuentes del Figma: Barlow Condensed (títulos) y Atkinson Hyperlegible (textos) */
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Barlow+Condensed:wght@800;900&display=swap");
+
+@import url("base/tipografia.css");
+@import url("base/accesibilidad.css");
+
+@import url("components/iconos.css");
+@import url("components/boton.css");
+@import url("components/nav.css");
+@import url("components/hero.css");
+@import url("components/tarjetaElemento.css");
+@import url("components/pasos.css");
+@import url("components/banda.css");
+@import url("components/pie.css");

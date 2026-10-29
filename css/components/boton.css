@@ -1,0 +1,78 @@
+/* Botones */
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #00838f;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    filter: brightness(1.15);
+}
+
+.botonOscuro {
+    background-color: #0b1d22;
+}
+
+.botonAmarillo {
+    background-color: #d4e157;
+    color: #0b1d22;
+}
+
+.botonBlanco {
+    background-color: #ffffff;
+    color: #00838f;
+}
+
+.botonBorde {
+    border-color: #00838f;
+    background-color: transparent;
+    color: #00838f;
+}
+
+/* Botón flotante de accesibilidad (abajo a la derecha en todas las páginas) */
+.botonAccesibilidad {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px 12px 14px;
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+    background-color: #1b2b2f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.botonAccesibilidad .icono {
+    width: 32px;
+    height: 32px;
+}
+
+/* En celular el botón solo muestra el ícono, para no tapar el contenido */
+@media (max-width: 700px) {
+    .botonAccesibilidad {
+        right: 16px;
+        bottom: 16px;
+        padding: 8px;
+        font-size: 0;
+    }
+}

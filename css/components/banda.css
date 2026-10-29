@@ -1,0 +1,48 @@
+/* Banda amarilla "¿Echas de menos un lugar?" que lleva al buzón */
+
+.bandaBuzon {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 40px max(20px, calc((100% - 1200px) / 2));
+    padding: 28px 40px;
+    border-radius: 16px;
+    background-color: #d4e157;
+}
+
+.bandaBuzon .icono {
+    width: 32px;
+    height: 32px;
+}
+
+.bandaBuzon div {
+    flex: 1;
+}
+
+.bandaBuzon h2 {
+    font-size: 27px;
+}
+
+.bandaBuzon .boton {
+    flex-shrink: 0;
+}
+
+/* Celular: el contenido se apila y el botón ocupa todo el ancho */
+@media (max-width: 700px) {
+    .bandaBuzon {
+        flex-wrap: wrap;
+        padding: 24px;
+    }
+
+    .bandaBuzon div {
+        flex-basis: calc(100% - 48px);
+    }
+
+    .bandaBuzon h2 {
+        font-size: 24px;
+    }
+
+    .bandaBuzon .boton {
+        width: 100%;
+    }
+}

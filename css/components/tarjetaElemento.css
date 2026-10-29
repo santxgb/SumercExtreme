@@ -1,0 +1,157 @@
+/* Tarjetas de Agua, Tierra y Viento en el Inicio */
+
+.elementos {
+    padding-top: 64px;
+}
+
+/* 3 columnas en escritorio; pasan a 2 y luego a 1 cuando no caben */
+.listaTarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.tarjetaElemento {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(158, 158, 158, 0.45);
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+/* Foto: mientras no esté la foto real se ve el degradado con el ícono, como en el Figma */
+.tarjetaFoto {
+    position: relative;
+    height: 230px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 72px, cover;
+}
+
+.tarjetaFoto img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    color: transparent;
+}
+
+.tarjetaAgua .tarjetaFoto {
+    background-image: url("../../assets/iconos/aguaFoto.svg"), linear-gradient(122deg, #00838f 0%, #42a5f5 80%);
+}
+
+.tarjetaTierra .tarjetaFoto {
+    background-image: url("../../assets/iconos/tierraFoto.svg"), linear-gradient(122deg, #1e1311 0%, #3e2723 80%);
+}
+
+.tarjetaViento .tarjetaFoto {
+    background-image: url("../../assets/iconos/vientoFoto.svg"), linear-gradient(122deg, #4dd0e1 0%, #d1eaf0 80%);
+}
+
+/* Texto de la tarjeta */
+.tarjetaElemento > :not(.tarjetaFoto) {
+    margin-right: 28px;
+    margin-left: 28px;
+}
+
+.tarjetaElemento h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 14px;
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.tarjetaElemento h3 .icono {
+    width: 32px;
+    height: 32px;
+}
+
+.tarjetaElemento h3 .iconoAgua { background-image: url("../../assets/iconos/aguaTitulo.svg"); }
+.tarjetaElemento h3 .iconoTierra { background-image: url("../../assets/iconos/tierraTitulo.svg"); }
+.tarjetaElemento h3 .iconoViento { background-image: url("../../assets/iconos/vientoTitulo.svg"); }
+
+.tarjetaLema {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.tarjetaElemento p {
+    font-size: 18px;
+}
+
+.tarjetaElemento .tarjetaDatos {
+    color: #00838f;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.etiquetaAlerta {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background-color: #d4e157;
+}
+
+.tarjetaElemento .etiquetaAlerta {
+    color: #3e2723;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.etiquetaAlerta .icono {
+    width: 18px;
+    height: 18px;
+}
+
+/* El botón queda siempre abajo, aunque el texto de las tarjetas tenga distinto largo */
+.tarjetaElemento .boton {
+    margin-top: auto;
+    margin-bottom: 28px;
+}
+
+.tarjetaTierra .boton {
+    background-color: #3e2723;
+}
+
+.tarjetaViento .boton {
+    background-color: #0b1d22;
+}
+
+@media (max-width: 700px) {
+    .elementos {
+        padding-top: 40px;
+    }
+
+    .listaTarjetas {
+        gap: 24px;
+    }
+
+    .tarjetaFoto {
+        height: 180px;
+    }
+
+    .tarjetaElemento > :not(.tarjetaFoto) {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .tarjetaElemento h3 {
+        font-size: 34px;
+    }
+
+    .tarjetaElemento .boton {
+        margin-bottom: 20px;
+    }
+}

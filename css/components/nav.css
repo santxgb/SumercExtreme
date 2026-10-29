@@ -1,0 +1,148 @@
+/* Encabezado: logo, navegación por elemento y acciones (Mis lugares y Buzón) */
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background-color: #0b1d22;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logoCirculos {
+    width: 50px;
+    height: 22px;
+    background: url("../../assets/iconos/marca.svg") center / contain no-repeat;
+}
+
+.logoTexto {
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.encabezado nav {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* Los elementos quedan en el centro y las acciones a la derecha */
+.menuElementos {
+    display: flex;
+    gap: 8px;
+    margin: 0 auto;
+}
+
+.menuElementos a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menuElementos a:hover,
+.menuElementos a[aria-current] {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.menuAcciones {
+    display: flex;
+    gap: 12px;
+}
+
+/* En el encabezado los botones son redondos (píldora) */
+.encabezado .boton {
+    padding: 10px 16px;
+    border-width: 1.5px;
+    border-radius: 999px;
+    font-size: 17px;
+}
+
+.encabezado .botonBorde {
+    border-color: rgba(255, 255, 255, 0.55);
+    color: #ffffff;
+}
+
+.encabezado .botonBorde[aria-current] {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.encabezado .botonAmarillo {
+    padding-right: 18px;
+    padding-left: 18px;
+}
+
+/* Íconos de bandera y sobre en los botones del encabezado */
+.encabezado .boton::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: center / contain no-repeat;
+}
+
+.encabezado .botonBorde::before {
+    background-image: url("../../assets/iconos/bandera.svg");
+}
+
+.encabezado .botonAmarillo::before {
+    background-image: url("../../assets/iconos/correoBuzon.svg");
+}
+
+/* Tableta: el menú pasa a una segunda fila */
+@media (max-width: 1024px) {
+    .encabezado {
+        flex-wrap: wrap;
+        row-gap: 14px;
+    }
+
+    .encabezado nav {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+
+    .menuElementos {
+        margin: 0;
+    }
+}
+
+/* Celular: menú y acciones centrados, uno debajo del otro */
+@media (max-width: 700px) {
+    .encabezado {
+        justify-content: center;
+    }
+
+    .encabezado nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .menuElementos {
+        gap: 4px;
+    }
+
+    .menuElementos a {
+        padding: 8px 12px;
+        font-size: 17px;
+    }
+
+    .encabezado .boton {
+        font-size: 16px;
+    }
+}

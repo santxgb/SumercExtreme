@@ -1,0 +1,25 @@
+/* Íconos: cada <span class="icono ..."> muestra un SVG descargado del Figma (carpeta assets/iconos).
+   El mismo ícono cambia de archivo según dónde esté, porque en el Figma tiene otro color o tamaño. */
+
+.icono {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.iconoAgua { background-image: url("../../assets/iconos/agua.svg"); }
+.iconoTierra { background-image: url("../../assets/iconos/tierra.svg"); }
+.iconoViento { background-image: url("../../assets/iconos/viento.svg"); }
+.iconoCorreo { background-image: url("../../assets/iconos/correoBanda.svg"); }
+.iconoUbicacion { background-image: url("../../assets/iconos/ubicacionLugar.svg"); }
+.iconoAlerta { background-image: url("../../assets/iconos/alerta.svg"); }
+.iconoAccesibilidad { background-image: url("../../assets/iconos/accesibilidad.svg"); }
+
+/* Sobre fondo oscuro (pie de página) los íconos van en blanco */
+.pie .iconoCorreo { background-image: url("../../assets/iconos/correo.svg"); }
+.pie .iconoUbicacion { background-image: url("../../assets/iconos/ubicacion.svg"); }

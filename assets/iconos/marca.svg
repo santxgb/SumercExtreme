@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="50" height="22" viewBox="0 0 50 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Marca" clip-path="url(#clip0_0_126)">
+<path id="Ellipse" d="M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z" fill="#00838F" stroke-width="2" stroke="#0B1D22"/>
+<path id="Ellipse_2" d="M35 11C35 16.5228 30.5228 21 25 21C19.4772 21 15 16.5228 15 11C15 5.47715 19.4772 1 25 1C30.5228 1 35 5.47715 35 11Z" fill="#4DD0E1" stroke-width="2" stroke="#0B1D22"/>
+<path id="Ellipse_3" d="M49 11C49 16.5228 44.5228 21 39 21C33.4772 21 29 16.5228 29 11C29 5.47715 33.4772 1 39 1C44.5228 1 49 5.47715 49 11Z" fill="#D4E157" stroke-width="2" stroke="#0B1D22"/>
+</g>
+<defs>
+<clipPath id="clip0_0_126">
+<rect width="50" height="22" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,91 @@
+/* Pie de página */
+
+.pie {
+    display: grid;
+    grid-template-columns: 460px auto auto 1fr;
+    column-gap: 80px;
+    row-gap: 40px;
+    padding-top: 56px;
+    padding-bottom: 32px;
+    background-color: #0b1d22;
+    color: #ffffff;
+}
+
+.pie a {
+    text-decoration: none;
+}
+
+.pie a:hover {
+    text-decoration: underline;
+}
+
+.pieMarca {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    line-height: 1.5;
+}
+
+.pieNombre {
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.pieAviso {
+    color: #d4e157;
+}
+
+.pie h2 {
+    margin-bottom: 12px;
+    color: #d4e157;
+    font-size: 22px;
+}
+
+.pie ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pieContacto li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Línea final con el año y la fuente de datos */
+.pieLinea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 24px;
+    grid-column: 1 / -1;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    font-size: 15px;
+}
+
+/* Tableta: la marca ocupa toda la fila y Contacto y Enlaces quedan debajo */
+@media (max-width: 1024px) {
+    .pie {
+        grid-template-columns: auto auto 1fr;
+        column-gap: 64px;
+    }
+
+    .pieMarca {
+        grid-column: 1 / -1;
+        max-width: 460px;
+    }
+}
+
+/* Celular: todo en una sola columna */
+@media (max-width: 700px) {
+    .pie {
+        grid-template-columns: 1fr;
+        row-gap: 32px;
+        padding-top: 40px;
+        padding-bottom: 96px;
+    }
+}

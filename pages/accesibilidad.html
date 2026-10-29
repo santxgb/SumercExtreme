@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Accesibilidad | SumercExtreme</title>
+    <meta name="description" content="Declaración de accesibilidad de SumercExtreme: nuestro compromiso, cómo navegar con el teclado y los ajustes disponibles.">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="paginaAccesibilidad">
+
+    <a class="saltarContenido" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="encabezado">
+        <a class="logo" href="../index.html">
+            <span class="logoCirculos" aria-hidden="true"></span>
+            <span class="logoTexto">SumercExtreme</span>
+        </a>
+
+        <nav aria-label="Principal">
+            <ul class="menuElementos">
+                <li><a href="agua.html"><span class="icono iconoAgua" aria-hidden="true"></span>Agua</a></li>
+                <li><a href="tierra.html"><span class="icono iconoTierra" aria-hidden="true"></span>Tierra</a></li>
+                <li><a href="viento.html"><span class="icono iconoViento" aria-hidden="true"></span>Viento</a></li>
+            </ul>
+            <ul class="menuAcciones">
+                <li><a class="boton botonBorde" href="misLugares.html">Mis lugares</a></li>
+                <li><a class="boton botonAmarillo" href="buzon.html">Buzón</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+
+        <section class="hero" aria-labelledby="tituloPrincipal">
+            <h1 id="tituloPrincipal">Accesibilidad</h1>
+            <p class="heroTexto">Queremos que cualquier persona pueda informarse sobre turismo extremo en Boyacá, sin importar cómo navegue la web.</p>
+        </section>
+
+        <section class="seccionAccesibilidad" aria-labelledby="tituloCompromiso">
+            <h2 id="tituloCompromiso">Nuestro compromiso</h2>
+            <ul class="listaCheck">
+                <li>Seguimos las Pautas de Accesibilidad para el Contenido Web (WCAG 2.2) del W3C, con meta de nivel AA.</li>
+                <li>Tomamos como referencia nacional la NTC 5854 y la Resolución 1519 de 2020 del MinTIC.</li>
+                <li>Evaluamos el sitio con pruebas de teclado, lector de pantalla, zoom y herramientas automáticas.</li>
+            </ul>
+        </section>
+
+        <section class="seccionAccesibilidad" aria-labelledby="tituloTeclado">
+            <h2 id="tituloTeclado">Navegar con el teclado</h2>
+            <table class="tablaTeclas">
+                <caption class="soloLectores">Teclas para navegar el sitio</caption>
+                <thead class="soloLectores">
+                    <tr>
+                        <th scope="col">Tecla</th>
+                        <th scope="col">Qué hace</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><kbd>Tab</kbd></th>
+                        <td>Ir al siguiente enlace, botón o campo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><kbd>Shift</kbd> + <kbd>Tab</kbd></th>
+                        <td>Volver al elemento anterior</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><kbd>Enter</kbd></th>
+                        <td>Abrir un enlace o activar un botón</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><kbd>Espacio</kbd></th>
+                        <td>Marcar una casilla o un interruptor</td>
+                    </tr>
+                    <!-- PENDIENTE: el panel de accesibilidad aún no existe; esta fila aplica cuando se agregue -->
+                    <tr>
+                        <th scope="row"><kbd>Esc</kbd></th>
+                        <td>Cerrar el panel de accesibilidad</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="notaTeclado">También encontrarás el enlace “Saltar al contenido principal” al presionar Tab por primera vez.</p>
+        </section>
+
+        <section class="seccionAccesibilidad" aria-labelledby="tituloAjustes">
+            <h2 id="tituloAjustes">Ajustes disponibles</h2>
+            <!-- PENDIENTE: los ajustes dependen del panel de accesibilidad, que queda para después -->
+            <p>Desde el botón “Accesibilidad”, visible en todas las páginas, puedes cambiar el tamaño del texto, activar alto contraste, subrayar enlaces, aumentar el espacio entre líneas y reducir animaciones. El sitio también funciona con el zoom del navegador hasta 200 %.</p>
+        </section>
+
+        <section class="bandaBarrera" aria-labelledby="tituloBarrera">
+            <span class="icono iconoCorreo" aria-hidden="true"></span>
+            <div>
+                <h2 id="tituloBarrera">¿Encontraste una barrera?</h2>
+                <p>Si algo no puedes usar o leer, cuéntanos en el buzón y lo corregiremos.</p>
+            </div>
+            <a class="boton botonBlanco" href="buzon.html">Ir al buzón</a>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="pieMarca">
+            <p class="pieNombre">SumercExtreme</p>
+            <p>Información de turismo extremo en Boyacá, organizada por elemento: agua, tierra y viento.</p>
+            <p class="pieAviso">Proyecto académico informativo. No vende ni reserva actividades.</p>
+        </div>
+
+        <section class="pieContacto" aria-labelledby="pieTituloContacto">
+            <h2 id="pieTituloContacto">Contacto</h2>
+            <ul>
+                <li><span class="icono iconoCorreo" aria-hidden="true"></span> Correo del proyecto</li>
+                <li><span class="icono iconoUbicacion" aria-hidden="true"></span> Sogamoso, Boyacá</li>
+                <li><span class="icono iconoCorreo" aria-hidden="true"></span> <a href="buzon.html">Escríbenos en el buzón</a></li>
+            </ul>
+        </section>
+
+        <nav class="pieEnlaces" aria-labelledby="pieTituloEnlaces">
+            <h2 id="pieTituloEnlaces">Enlaces</h2>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="misLugares.html">Mis lugares</a></li>
+                <li><a href="buzon.html">Buzón</a></li>
+                <li><a href="accesibilidad.html" aria-current="page">Accesibilidad</a></li>
+            </ul>
+        </nav>
+
+        <div class="pieLinea">
+            <p>2026 SumercExtreme · Proyecto integrador 2026-II</p>
+            <p>Fuente principal de datos: SITUR Boyacá</p>
+        </div>
+    </footer>
+
+    <a class="botonAccesibilidad" href="accesibilidad.html" aria-current="page">
+        <span class="icono iconoAccesibilidad" aria-hidden="true"></span> Accesibilidad
+    </a>
+
+</body>
+</html>

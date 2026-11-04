@@ -1,0 +1,74 @@
+/* Tema Tierra: colores de las páginas de Tierra (marrón y verde lima) */
+
+.temaTierra .hero {
+    background-color: #3e2723;
+    background-image:
+        url("../../assets/iconos/decoracion2.svg"),
+        url("../../assets/iconos/decoracion2.svg"),
+        linear-gradient(150deg, #1e1311 0%, #3e2723 70%);
+    background-position:
+        right -20px top -100px,
+        right -20px top 180px,
+        center;
+    background-size: 360px, 200px, cover;
+    background-repeat: no-repeat;
+}
+
+/* La montaña verde lima junto al título es el mismo ícono del menú (.iconoTierra), no necesita cambio */
+
+/* Filtros: borde y relleno marrón en lugar del azul de Agua */
+.temaTierra .chipFiltro {
+    border-color: #3e2723;
+    color: #3e2723;
+}
+
+.temaTierra .chipFiltro:hover {
+    background-color: #f0f4c3;
+}
+
+.temaTierra .chipFiltro[aria-pressed="true"] {
+    background-color: #3e2723;
+    color: #ffffff;
+}
+
+/* Recuadro de la foto: verde lima con el ícono de imagen en marrón */
+.temaTierra .tarjetaLugar .tarjetaFoto {
+    background: #d4e157 url("../../assets/iconos/imagenTierra.svg") center / 36px no-repeat;
+}
+
+/* Barras de dificultad y enlace "Ver detalle" en marrón */
+.temaTierra .nivel1 {
+    --barra1: #3e2723;
+}
+
+.temaTierra .nivel2 {
+    --barra1: #3e2723;
+    --barra2: #3e2723;
+}
+
+.temaTierra .nivel3 {
+    --barra1: #3e2723;
+    --barra2: #3e2723;
+    --barra3: #3e2723;
+}
+
+.temaTierra .nivel4 {
+    --barra1: #3e2723;
+    --barra2: #3e2723;
+    --barra3: #3e2723;
+    --barra4: #3e2723;
+}
+
+.temaTierra .enlaceDetalle {
+    color: #3e2723;
+}
+
+@media (max-width: 700px) {
+    .temaTierra .hero {
+        background-size: 220px, 120px, cover;
+        background-position:
+            right -90px top -80px,
+            right -50px bottom -30px,
+            center;
+    }
+}

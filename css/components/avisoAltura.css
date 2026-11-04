@@ -1,0 +1,73 @@
+/* Aviso amarillo de Viento: "Todas estas actividades se realizan en altura" */
+
+.avisoAltura {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 28px max(20px, calc((100% - 1200px) / 2)) 0;
+    padding: 20px 28px;
+    border-radius: 16px;
+    background-color: #d4e157;
+    color: #0b1d22;
+}
+
+.avisoAltura .icono {
+    width: 28px;
+    height: 28px;
+}
+
+.avisoTexto {
+    flex: 1;
+}
+
+.avisoTexto h2 {
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.avisoTexto p {
+    font-size: 16px;
+}
+
+.avisoAcciones {
+    display: flex;
+    flex-shrink: 0;
+    gap: 12px;
+    list-style: none;
+}
+
+.avisoAltura .boton {
+    padding: 10px 22px;
+    background-color: #3e2723;
+    font-size: 16px;
+}
+
+/* El aviso queda más cerca de los filtros que el hero */
+.avisoAltura + .filtros {
+    padding-top: 32px;
+}
+
+/* Celular: el texto ocupa todo el ancho y los dos botones van debajo, repartidos por igual */
+@media (max-width: 700px) {
+    .avisoAltura {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .avisoTexto {
+        flex-basis: calc(100% - 44px);
+    }
+
+    .avisoAcciones {
+        flex-basis: 100%;
+    }
+
+    .avisoAcciones li {
+        flex: 1;
+    }
+
+    .avisoAcciones .boton {
+        width: 100%;
+    }
+}

@@ -18,5 +18,8 @@
 @import url("components/filtros.css");
 @import url("components/tarjetaLugar.css");
 @import url("components/etiquetas.css");
+@import url("components/avisoAltura.css");
 
 @import url("themes/agua.css");
+@import url("themes/tierra.css");
+@import url("themes/viento.css");

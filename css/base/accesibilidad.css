@@ -77,9 +77,10 @@ main :focus-visible {
     outline-color: #000000;
 }
 
-/* Subrayar enlaces */
+/* Subrayar enlaces: !important porque es una preferencia de la persona y debe ganarle
+   a los estilos de cada componente que quitan el subrayado */
 .subrayarEnlaces a {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 /* Más espacio entre líneas */

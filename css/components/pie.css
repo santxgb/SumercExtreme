@@ -6,7 +6,8 @@
     column-gap: 80px;
     row-gap: 40px;
     padding-top: 56px;
-    padding-bottom: 32px;
+    /* Espacio extra abajo para que el botón flotante de accesibilidad no tape el enlace a SITUR */
+    padding-bottom: 104px;
     background-color: #0b1d22;
     color: #ffffff;
 }
@@ -65,6 +66,16 @@
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.25);
     font-size: 15px;
+}
+
+/* Enlace a SITUR: va subrayado y en amarillo para que se distinga del texto que lo rodea */
+.pieLinea a {
+    color: #d4e157;
+    text-decoration: underline;
+}
+
+.pieLinea a:hover {
+    text-decoration-thickness: 2px;
 }
 
 /* Tableta: la marca ocupa toda la fila y Contacto y Enlaces quedan debajo */

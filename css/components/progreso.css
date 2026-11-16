@@ -1,0 +1,44 @@
+/* Tarjeta de progreso de Mis lugares: "Has visitado 4 de 34 lugares" */
+
+.tarjetaProgreso {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 620px;
+    margin-top: 6px;
+    padding: 18px 24px;
+    border-radius: 14px;
+    background-color: #ffffff;
+    color: #1b2b2f;
+}
+
+.tarjetaProgreso p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Barra de progreso: azul claro de fondo y verde azulado para lo visitado */
+.barraProgreso {
+    width: 100%;
+    height: 12px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 999px;
+    background-color: #d1eaf0;
+    appearance: none;
+}
+
+.barraProgreso::-webkit-progress-bar {
+    background-color: #d1eaf0;
+}
+
+.barraProgreso::-webkit-progress-value {
+    border-radius: 999px;
+    background-color: #00838f;
+}
+
+.barraProgreso::-moz-progress-bar {
+    border-radius: 999px;
+    background-color: #00838f;
+}

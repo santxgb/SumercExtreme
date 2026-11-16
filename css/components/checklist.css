@@ -1,0 +1,183 @@
+/* Mis lugares: un grupo por elemento con la lista de lugares para marcar */
+
+.grupoElemento {
+    margin: 32px max(20px, calc((100% - 1200px) / 2)) 0;
+    overflow: hidden;
+    border: 1px solid rgba(158, 158, 158, 0.45);
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+
+/* Encabezado del grupo con el color de cada elemento */
+.grupoEncabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 24px;
+    background-color: #00838f;
+    color: #ffffff;
+}
+
+.grupoEncabezado h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 27px;
+}
+
+.grupoEncabezado .icono {
+    width: 24px;
+    height: 24px;
+}
+
+.grupoConteo {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.grupoElemento.temaAgua .iconoAgua {
+    background-image: url("../../assets/iconos/aguaHero.svg");
+}
+
+.grupoElemento.temaTierra .grupoEncabezado {
+    background-color: #3e2723;
+}
+
+.grupoElemento.temaViento .grupoEncabezado {
+    background-color: #d1eaf0;
+    color: #0b1d22;
+}
+
+.grupoElemento.temaViento .iconoViento {
+    background-image: url("../../assets/iconos/vientoFoto.svg");
+}
+
+/* Cada fila: casilla, nombre y ubicación, insignia "Visitado" y enlace */
+.itemLugar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 24px;
+    border-bottom: 1px solid rgba(158, 158, 158, 0.35);
+}
+
+.itemLugar:has(input:checked) {
+    background-color: #e8f4f6;
+}
+
+.itemLugar input {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    border: 2px solid #00838f;
+    border-radius: 5px;
+    background-color: #ffffff;
+    appearance: none;
+    cursor: pointer;
+}
+
+.itemLugar input:checked {
+    background: #00838f url("../../assets/iconos/checkBlanco.svg") center / 18px no-repeat;
+}
+
+.itemLugar label {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.lugarNombre {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.itemLugar .lugarUbicacion {
+    font-size: 14px;
+}
+
+.itemLugar .lugarUbicacion .icono {
+    width: 14px;
+    height: 14px;
+}
+
+/* La insignia solo se ve cuando la casilla está marcada */
+.etiquetaVisitado {
+    display: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background-color: #d4e157;
+    color: #1b2b2f;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.itemLugar input:checked ~ .etiquetaVisitado {
+    display: inline-block;
+}
+
+.itemLugar .enlaceDetalle {
+    flex-shrink: 0;
+    font-size: 15px;
+}
+
+.enlaceGrupo {
+    display: block;
+    padding: 16px 24px;
+    color: #00838f;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.enlaceGrupo:hover {
+    text-decoration: underline;
+}
+
+/* Tierra: casillas y enlaces en marrón */
+.grupoElemento.temaTierra .itemLugar input {
+    border-color: #3e2723;
+}
+
+.grupoElemento.temaTierra .itemLugar input:checked {
+    background-color: #3e2723;
+}
+
+.grupoElemento.temaTierra .enlaceGrupo {
+    color: #3e2723;
+}
+
+/* Celular: la insignia y el enlace bajan debajo del nombre */
+@media (max-width: 700px) {
+    .grupoEncabezado,
+    .itemLugar,
+    .enlaceGrupo {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .grupoEncabezado h2 {
+        font-size: 24px;
+    }
+
+    .itemLugar {
+        flex-wrap: wrap;
+        row-gap: 8px;
+    }
+
+    .itemLugar label {
+        flex-basis: calc(100% - 40px);
+    }
+
+    .etiquetaVisitado,
+    .itemLugar .enlaceDetalle {
+        margin-left: 40px;
+    }
+
+    .itemLugar input:checked ~ .etiquetaVisitado + .enlaceDetalle {
+        margin-left: 0;
+    }
+}

@@ -182,7 +182,64 @@
         </div>
     </footer>
 
-    <a class="botonAccesibilidad" href="../accesibilidad.html">
+    <!-- Panel de ajustes de accesibilidad: lo abre el botón flotante (js/accesibilidad.js) -->
+    <dialog class="panelAccesibilidad" id="panelAccesibilidad" aria-labelledby="tituloPanelAccesibilidad">
+        <div class="panelEncabezado">
+            <h2 id="tituloPanelAccesibilidad"><span class="icono iconoAccesibilidad" aria-hidden="true"></span> Ajustes de accesibilidad</h2>
+            <button type="button" class="panelCerrar" aria-label="Cerrar el panel de accesibilidad"><span aria-hidden="true">✕</span></button>
+        </div>
+
+        <fieldset class="ajusteTexto">
+            <legend>Tamaño del texto</legend>
+            <div class="opcionesTexto">
+                <input type="radio" id="textoPequeno" name="tamanoTexto" value="pequeno">
+                <label for="textoPequeno"><span aria-hidden="true">A−</span><span class="soloLectores">Texto pequeño</span></label>
+                <input type="radio" id="textoNormal" name="tamanoTexto" value="normal" checked>
+                <label for="textoNormal"><span aria-hidden="true">A</span><span class="soloLectores">Texto normal</span></label>
+                <input type="radio" id="textoGrande" name="tamanoTexto" value="grande">
+                <label for="textoGrande"><span aria-hidden="true">A+</span><span class="soloLectores">Texto grande</span></label>
+            </div>
+        </fieldset>
+
+        <ul class="listaAjustes">
+            <li class="ajuste">
+                <label for="ajusteContraste">
+                    <span class="ajusteNombre">Alto contraste</span>
+                    <span class="ajusteAyuda">Texto negro sobre fondo blanco y bordes más marcados.</span>
+                </label>
+                <input type="checkbox" role="switch" id="ajusteContraste" name="altoContraste">
+            </li>
+            <li class="ajuste">
+                <label for="ajusteSubrayar">
+                    <span class="ajusteNombre">Subrayar enlaces</span>
+                    <span class="ajusteAyuda">Todos los enlaces se muestran subrayados.</span>
+                </label>
+                <input type="checkbox" role="switch" id="ajusteSubrayar" name="subrayarEnlaces">
+            </li>
+            <li class="ajuste">
+                <label for="ajusteEspacio">
+                    <span class="ajusteNombre">Más espacio entre líneas</span>
+                    <span class="ajusteAyuda">Facilita la lectura de textos largos.</span>
+                </label>
+                <input type="checkbox" role="switch" id="ajusteEspacio" name="masEspacio">
+            </li>
+            <li class="ajuste">
+                <label for="ajusteAnimaciones">
+                    <span class="ajusteNombre">Reducir animaciones</span>
+                    <span class="ajusteAyuda">Quita transiciones y movimientos.</span>
+                </label>
+                <input type="checkbox" role="switch" id="ajusteAnimaciones" name="sinAnimaciones">
+            </li>
+        </ul>
+
+        <div class="panelAcciones">
+            <button type="button" class="boton botonBorde panelRestablecer">Restablecer</button>
+            <a class="enlaceDeclaracion" href="../accesibilidad.html">Ver declaración <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="panelNota">Tus ajustes se guardan en este computador. Esc cierra este panel.</p>
+    </dialog>
+
+    <a class="botonAccesibilidad" aria-haspopup="dialog" aria-controls="panelAccesibilidad" href="../accesibilidad.html">
         <span class="icono iconoAccesibilidad" aria-hidden="true"></span> Accesibilidad
     </a>
 

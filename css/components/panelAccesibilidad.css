@@ -1,0 +1,210 @@
+/* Panel de ajustes de accesibilidad (ventana <dialog> que abre el botón flotante) */
+
+.panelAccesibilidad {
+    width: min(460px, calc(100% - 32px));
+    max-height: calc(100% - 32px);
+    padding: 32px;
+    border: 0;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    color: #1b2b2f;
+}
+
+.panelAccesibilidad::backdrop {
+    background-color: rgba(11, 29, 34, 0.6);
+}
+
+.panelAccesibilidad[open] {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.panelEncabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.panelEncabezado h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 30px;
+}
+
+.panelEncabezado .icono {
+    width: 36px;
+    height: 36px;
+}
+
+.panelCerrar {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid rgba(27, 43, 47, 0.5);
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #1b2b2f;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Tamaño del texto: tres opciones unidas (A−, A, A+) */
+.ajusteTexto {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.ajusteTexto legend {
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.opcionesTexto {
+    display: flex;
+    overflow: hidden;
+    border: 2px solid #00838f;
+    border-radius: 10px;
+}
+
+/* El radio queda oculto: lo que se ve es su etiqueta */
+.opcionesTexto input {
+    position: absolute;
+    opacity: 0;
+}
+
+.opcionesTexto label {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    color: #00838f;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.opcionesTexto label:nth-of-type(1) {
+    font-size: 16px;
+}
+
+.opcionesTexto label:nth-of-type(2) {
+    font-size: 20px;
+}
+
+.opcionesTexto label:nth-of-type(3) {
+    font-size: 24px;
+}
+
+.opcionesTexto input:checked + label {
+    background-color: #00838f;
+    color: #ffffff;
+}
+
+.opcionesTexto input:focus-visible + label {
+    outline: 3px solid #0b1d22;
+    outline-offset: -5px;
+}
+
+/* Interruptores (casillas con role="switch") */
+.listaAjustes {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.ajuste {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.ajuste label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.ajusteNombre {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.ajusteAyuda {
+    font-size: 15px;
+}
+
+.ajuste input {
+    position: relative;
+    flex-shrink: 0;
+    width: 56px;
+    height: 32px;
+    margin: 0;
+    border: 2px solid #5f6b6d;
+    border-radius: 999px;
+    background-color: #ffffff;
+    appearance: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.ajuste input::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #5f6b6d;
+    transition: transform 0.2s;
+}
+
+.ajuste input:checked {
+    border-color: #00838f;
+    background-color: #00838f;
+}
+
+.ajuste input:checked::before {
+    background-color: #ffffff;
+    transform: translateX(24px);
+}
+
+.panelAcciones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 20px;
+}
+
+.enlaceDeclaracion {
+    color: #00838f;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.enlaceDeclaracion:hover {
+    text-decoration: underline;
+}
+
+.panelNota {
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .panelAccesibilidad {
+        padding: 22px;
+    }
+
+    .panelEncabezado h2 {
+        font-size: 24px;
+    }
+}

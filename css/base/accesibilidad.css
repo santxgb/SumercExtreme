@@ -36,3 +36,74 @@
 main :focus-visible {
     outline-color: #00838f;
 }
+
+/* ---- Ajustes del panel de accesibilidad ----
+   js/accesibilidad.js pone estas clases en <html> según lo que elija la persona */
+
+/* Tamaño del texto: se escala toda la página para que el diseño no se descuadre */
+.textoPequeno body {
+    zoom: 0.9;
+}
+
+.textoGrande body {
+    zoom: 1.15;
+}
+
+/* Alto contraste: texto negro sobre blanco y bordes más marcados */
+.altoContraste body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.altoContraste .tarjetaElemento,
+.altoContraste .tarjetaLugar,
+.altoContraste .grupoElemento,
+.altoContraste .resumenLugar,
+.altoContraste .cajaSeguridad,
+.altoContraste .formulario,
+.altoContraste .campo input,
+.altoContraste .campo select,
+.altoContraste .campo textarea,
+.altoContraste .chipFiltro,
+.altoContraste .etiquetaDificultad {
+    border: 2px solid #000000;
+}
+
+.altoContraste .itemLugar {
+    border-bottom-color: #000000;
+}
+
+.altoContraste :focus-visible {
+    outline-color: #000000;
+}
+
+/* Subrayar enlaces */
+.subrayarEnlaces a {
+    text-decoration: underline;
+}
+
+/* Más espacio entre líneas */
+.masEspacio body,
+.masEspacio p,
+.masEspacio li,
+.masEspacio dd {
+    line-height: 1.9;
+}
+
+/* Reducir animaciones: también se aplica si el sistema lo pide */
+.sinAnimaciones *,
+.sinAnimaciones *::before,
+.sinAnimaciones *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}

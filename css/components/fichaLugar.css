@@ -1,0 +1,540 @@
+/* Ficha de cada lugar (pages/lugares/*.html): hero, galería, actividades, seguridad, mapa y resumen */
+
+/* ---- Hero del lugar ---- */
+
+.heroLugar {
+    gap: 14px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.heroLugar h1 {
+    font-size: clamp(40px, 5vw, 63px);
+}
+
+.heroLugar .migasPan a {
+    color: #d4e157;
+}
+
+.heroLugar .lugarUbicacion {
+    gap: 8px;
+    font-size: 19px;
+}
+
+.heroLugar .lugarUbicacion .icono {
+    width: 22px;
+    height: 22px;
+    background-image: url("../../assets/iconos/ubicacionHero.svg");
+}
+
+.heroLugar .listaEtiquetas li {
+    gap: 6px;
+    padding: 6px 12px;
+    border: 0;
+    font-size: 15px;
+}
+
+.heroLugar .listaEtiquetas .icono {
+    width: 16px;
+    height: 16px;
+}
+
+/* Etiqueta del elemento principal, con el color de cada elemento */
+.etiquetaAgua {
+    background-color: #00838f;
+    color: #ffffff;
+}
+
+.etiquetaAgua .iconoAgua {
+    background-image: url("../../assets/iconos/aguaEtiqueta.svg");
+}
+
+.etiquetaTierra {
+    background-color: #d4e157;
+    color: #3e2723;
+}
+
+.etiquetaTierra .iconoTierra {
+    background-image: url("../../assets/iconos/tierraTitulo.svg");
+}
+
+.etiquetaViento {
+    background-color: #0b1d22;
+    color: #ffffff;
+}
+
+/* "También Tierra", "También Agua"… */
+.etiquetaTambienEn {
+    background-color: #ffffff;
+    color: #1b2b2f;
+}
+
+.etiquetaAltura {
+    background-color: #d4e157;
+    color: #3e2723;
+}
+
+/* ---- Cuerpo: columna principal + resumen a la derecha ---- */
+
+.contenidoLugar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    align-items: start;
+    gap: 48px;
+    padding: 48px max(20px, calc((100% - 1200px) / 2)) 0;
+}
+
+.columnaPrincipal {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Galería: foto grande y miniaturas debajo */
+.galeria {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.fotoPrincipal,
+.listaMiniaturas li {
+    overflow: hidden;
+    border-radius: 14px;
+    background-color: #d1eaf0;
+}
+
+.fotoPrincipal {
+    height: 420px;
+}
+
+.fotoPrincipal img,
+.listaMiniaturas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Lugar sin foto todavía: recuadro con el ícono de imagen */
+.sinFoto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 150px;
+    background: #d1eaf0 url("../../assets/iconos/imagen.svg") center / 40px no-repeat;
+    font-size: 15px;
+}
+
+.listaMiniaturas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+}
+
+.listaMiniaturas li {
+    height: 150px;
+}
+
+/* Secciones: "Qué puedes hacer aquí", "Cómo llegar"… */
+.seccionLugar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.seccionLugar h2 {
+    font-size: 34px;
+}
+
+.etiquetaActividad {
+    background-color: #d1eaf0;
+}
+
+.seccionLugar .listaEtiquetas li {
+    padding: 6px 12px;
+    font-size: 15px;
+}
+
+/* Aviso "Ten en cuenta" (recuadro amarillo) y aviso corto (solo texto) */
+.avisoLugar {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    background-color: #d4e157;
+    color: #1b2b2f;
+    font-size: 16px;
+}
+
+.avisoLugar strong {
+    display: block;
+}
+
+.avisoLugar .icono {
+    margin-top: 2px;
+}
+
+.avisoCorto {
+    align-items: center;
+    padding: 0;
+    background: none;
+    color: #3e2723;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* Condiciones de seguridad */
+.cajaSeguridad {
+    padding: 32px;
+    border: 2px solid #00838f;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+
+.cajaSeguridad h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.iconoEscudo {
+    width: 32px;
+    height: 32px;
+    background-image: url("../../assets/iconos/escudo.svg");
+}
+
+/* Lista con chulos (también la usa la página de accesibilidad) */
+.listaCheck {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.listaCheck li {
+    min-height: 24px;
+    padding-left: 36px;
+    background: url("../../assets/iconos/check.svg") left top / 24px no-repeat;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.notaFuente {
+    font-size: 14px;
+}
+
+.cajaSeguridad .notaFuente {
+    color: #00838f;
+    font-size: 15px;
+}
+
+/* Mapa */
+.mapaLugar {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 14px;
+    background-color: #d1eaf0;
+}
+
+.mapaLugar iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Banda "También en este lugar: …", con el color del otro elemento */
+.bandaTambien {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 28px;
+    border-radius: 16px;
+    color: #ffffff;
+}
+
+.bandaTambien > .icono {
+    width: 40px;
+    height: 40px;
+}
+
+.bandaTambien div {
+    flex: 1;
+}
+
+.bandaTambien h2 {
+    margin-bottom: 4px;
+    font-size: 25px;
+}
+
+.bandaTambien .boton {
+    flex-shrink: 0;
+    padding: 14px 24px;
+    color: #3e2723;
+}
+
+.bandaTambien.temaAgua {
+    background-image: linear-gradient(150deg, #0b1d22 0%, #00838f 44%, #42a5f5 100%);
+}
+
+.bandaTambien.temaAgua .iconoAgua {
+    background-image: url("../../assets/iconos/aguaHero.svg");
+}
+
+.bandaTambien.temaTierra {
+    background-color: #3e2723;
+}
+
+.bandaTambien.temaTierra .iconoTierra {
+    background-image: url("../../assets/iconos/tierraBanda.svg");
+}
+
+.bandaTambien.temaViento {
+    background-image: linear-gradient(122deg, #4dd0e1 0%, #d1eaf0 100%);
+    color: #0b1d22;
+}
+
+.bandaTambien.temaViento .iconoViento {
+    background-image: url("../../assets/iconos/vientoFoto.svg");
+}
+
+.bandaTambien.temaViento .boton {
+    background-color: #0b1d22;
+    color: #ffffff;
+}
+
+.volver .boton {
+    padding: 14px 24px;
+    background-color: #ffffff;
+}
+
+/* ---- Resumen (columna derecha) ---- */
+
+.resumenLugar {
+    position: sticky;
+    top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px;
+    border: 1px solid rgba(158, 158, 158, 0.5);
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+.listaDatos {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(158, 158, 158, 0.5);
+}
+
+.datoLugar dt {
+    margin-bottom: 8px;
+    color: #00838f;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.datoLugar dd {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+}
+
+.datoValor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* En el resumen las barras de dificultad son más grandes */
+.resumenLugar .barrasDificultad {
+    zoom: 1.6;
+}
+
+.datoPrecio {
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.datoAyuda {
+    font-size: 16px;
+}
+
+/* Botón "Marcar como visitado": la casilla va dentro del recuadro */
+.marcarVisitado {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    border: 2px solid #00838f;
+    border-radius: 10px;
+    color: #00838f;
+}
+
+.marcarVisitado input {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    border: 2px solid #00838f;
+    border-radius: 5px;
+    background-color: #ffffff;
+    appearance: none;
+    cursor: pointer;
+}
+
+.marcarVisitado input:checked {
+    background: #00838f url("../../assets/iconos/checkBlanco.svg") center / 18px no-repeat;
+}
+
+.marcarVisitado label {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.enlaceReportar {
+    color: #00838f;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.enlaceReportar:hover {
+    text-decoration: underline;
+}
+
+/* ---- Colores de Tierra (marrón y verde lima) ---- */
+
+.temaTierra .fotoPrincipal,
+.temaTierra .listaMiniaturas li,
+.temaTierra .mapaLugar,
+.temaTierra .sinFoto {
+    background-color: #e9eec2;
+}
+
+.temaTierra .etiquetaActividad,
+.temaViento .etiquetaActividad {
+    border: 1.5px solid currentColor;
+    background-color: #ffffff;
+}
+
+.temaTierra .cajaSeguridad,
+.temaTierra .marcarVisitado,
+.temaTierra .marcarVisitado input {
+    border-color: #3e2723;
+}
+
+.temaTierra .iconoEscudo {
+    background-image: url("../../assets/iconos/escudoTierra.svg");
+}
+
+.temaTierra .listaCheck li {
+    background-image: url("../../assets/iconos/checkTierra.svg");
+}
+
+.temaTierra .datoLugar dt,
+.temaTierra .cajaSeguridad .notaFuente,
+.temaTierra .marcarVisitado,
+.temaTierra .enlaceReportar {
+    color: #3e2723;
+}
+
+.temaTierra .marcarVisitado input:checked {
+    background-color: #3e2723;
+}
+
+.temaTierra .volver .boton {
+    border-color: #3e2723;
+    color: #3e2723;
+}
+
+/* ---- Colores de Viento: textos oscuros sobre el hero celeste ---- */
+
+.temaViento .heroLugar .lugarUbicacion .icono {
+    background-image: url("../../assets/iconos/ubicacionLugar.svg");
+}
+
+.temaViento .etiquetaActividad {
+    color: #00838f;
+}
+
+/* ---- Tableta: el resumen pasa arriba, debajo del hero ---- */
+
+@media (max-width: 1024px) {
+    .contenidoLugar {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .resumenLugar {
+        position: static;
+        order: -1;
+    }
+
+    .fotoPrincipal {
+        height: 340px;
+    }
+}
+
+/* ---- Celular ---- */
+
+@media (max-width: 700px) {
+    .contenidoLugar {
+        padding-top: 32px;
+    }
+
+    .resumenLugar,
+    .cajaSeguridad {
+        padding: 22px;
+    }
+
+    .fotoPrincipal {
+        height: 240px;
+    }
+
+    .listaMiniaturas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .listaMiniaturas li {
+        height: 110px;
+    }
+
+    .seccionLugar h2 {
+        font-size: 28px;
+    }
+
+    .listaCheck li {
+        font-size: 17px;
+    }
+
+    .mapaLugar {
+        height: 240px;
+    }
+
+    .bandaTambien {
+        flex-wrap: wrap;
+        padding: 22px;
+    }
+
+    .bandaTambien div {
+        flex-basis: calc(100% - 60px);
+    }
+
+    .bandaTambien .boton {
+        width: 100%;
+    }
+}

@@ -6,6 +6,8 @@
     <title>Tierra | SumercExtreme</title>
     <meta name="description" content="Actividades de turismo extremo en cuevas, paredes de roca, desiertos y alta montaña de Boyacá.">
     <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/accesibilidad.js"></script>
+    <script src="../js/filtros.js" defer></script>
 </head>
 <body class="temaTierra paginaTierra">
 
@@ -44,6 +46,18 @@
             <p class="heroDatos">13 lugares en 4 regiones</p>
         </section>
 
+        <section class="avisoAltura" aria-labelledby="tituloAviso">
+            <span class="icono iconoAlerta" aria-hidden="true"></span>
+            <div class="avisoTexto">
+                <h2 id="tituloAviso">Varias de estas actividades se hacen en cuevas y espacios cerrados</h2>
+                <p>Si te incomodan los lugares cerrados o la oscuridad, quizás prefieras explorar otro elemento. También hay escalada y senderismo al aire libre.</p>
+            </div>
+            <ul class="avisoAcciones">
+                <li><a class="boton botonOscuro" href="agua.html">Ver Agua</a></li>
+                <li><a class="boton botonOscuro" href="viento.html">Ver Viento</a></li>
+            </ul>
+        </section>
+
         <section class="filtros" aria-labelledby="tituloFiltros">
             <h2 id="tituloFiltros">Filtrar por región</h2>
             <ul class="listaFiltros">
@@ -59,13 +73,10 @@
             <h2 id="tituloLugares" class="soloLectores">Lugares de tierra</h2>
             <ul class="listaLugares">
 
-                <!-- REVISAR: las rutas de imagen (../assets/img/tierra/*.jpg) y los textos alt son
-                     provisionales. La carpeta assets/ aún no existe; cambiar por las fotos reales. -->
-
                 <li>
                     <article class="tarjetaLugar">
                         <figure class="tarjetaFoto">
-                            <img src="../assets/img/tierra/cucaita-parque-escalada.jpg" alt="Pared de escalada en el Parque de escalada Cucaita">
+                            <img src="../assets/img/tierra/cucaita-parque-escalada.jpg" alt="Escaladora en rápel sobre una pared de roca en Cucaita">
                         </figure>
                         <h3>Parque de escalada Cucaita</h3>
                         <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Cucaita</p>
@@ -74,14 +85,14 @@
                             <li class="etiquetaDificultad"><span class="barrasDificultad nivel3" aria-hidden="true"></span> Intermedio-avanzado</li>
                             <li class="etiquetaRegion">Centro</li>
                         </ul>
-                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Parque de escalada Cucaita</span> <span aria-hidden="true">→</span></a>
+                        <a class="enlaceDetalle" href="lugares/tierra-cucaita-parque-escalada.html">Ver detalle<span class="soloLectores"> de Parque de escalada Cucaita</span> <span aria-hidden="true">→</span></a>
                     </article>
                 </li>
 
                 <li>
                     <article class="tarjetaLugar">
                         <figure class="tarjetaFoto">
-                            <img src="../assets/img/tierra/lago-de-tota-senderos.jpg" alt="Sendero junto al Lago de Tota">
+                            <img src="../assets/img/tierra/lago-de-tota-senderos.jpg" alt="Pradera y sendero junto al Lago de Tota">
                         </figure>
                         <h3>Senderos del Lago de Tota</h3>
                         <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Aquitania – Tota – Cuítiva</p>
@@ -91,14 +102,14 @@
                             <li class="etiquetaRegion">Sugamuxi</li>
                             <li class="etiquetaTambien">También: Agua</li>
                         </ul>
-                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Senderos del Lago de Tota</span> <span aria-hidden="true">→</span></a>
+                        <a class="enlaceDetalle" href="lugares/tierra-lago-de-tota.html">Ver detalle<span class="soloLectores"> de Senderos del Lago de Tota</span> <span aria-hidden="true">→</span></a>
                     </article>
                 </li>
 
                 <li>
                     <article class="tarjetaLugar">
                         <figure class="tarjetaFoto">
-                            <img src="../assets/img/tierra/escalada-topaga.jpg" alt="Escalada en roca en Tópaga">
+                            <img src="../assets/img/tierra/escalada-topaga.jpg" alt="Escalador en la Peña de las Águilas, en Puente Reyes">
                         </figure>
                         <h3>Escalada en Tópaga (Puente Reyes)</h3>
                         <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Tópaga</p>
@@ -107,14 +118,14 @@
                             <li class="etiquetaDificultad"><span class="barrasDificultad nivel3" aria-hidden="true"></span> Intermedio-avanzado</li>
                             <li class="etiquetaRegion">Sugamuxi</li>
                         </ul>
-                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Escalada en Tópaga (Puente Reyes)</span> <span aria-hidden="true">→</span></a>
+                        <a class="enlaceDetalle" href="lugares/tierra-escalada-topaga.html">Ver detalle<span class="soloLectores"> de Escalada en Tópaga (Puente Reyes)</span> <span aria-hidden="true">→</span></a>
                     </article>
                 </li>
 
                 <li>
                     <article class="tarjetaLugar">
                         <figure class="tarjetaFoto">
-                            <img src="../assets/img/tierra/cascada-cueva-hayal.jpg" alt="Cascada y entrada de la cueva del Hayal en Santa Sofía">
+                            <img src="../assets/img/tierra/cascada-cueva-hayal-2.jpg" alt="Cascada del Hayal cayendo junto a la boca de la cueva">
                         </figure>
                         <h3>Cascada y Cueva del Hayal</h3>
                         <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Santa Sofía</p>
@@ -123,14 +134,14 @@
                             <li class="etiquetaDificultad"><span class="barrasDificultad nivel2" aria-hidden="true"></span> Intermedio</li>
                             <li class="etiquetaRegion">Ricaurte</li>
                         </ul>
-                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Cascada y Cueva del Hayal</span> <span aria-hidden="true">→</span></a>
+                        <a class="enlaceDetalle" href="lugares/tierra-cascada-cueva-hayal.html">Ver detalle<span class="soloLectores"> de Cascada y Cueva del Hayal</span> <span aria-hidden="true">→</span></a>
                     </article>
                 </li>
 
                 <li>
                     <article class="tarjetaLugar">
                         <figure class="tarjetaFoto">
-                            <img src="../assets/img/tierra/cueva-rubio.jpg" alt="Entrada de la Cueva Rubio en Chitaraque">
+                            <img src="../assets/img/tierra/cueva-rubio.jpg" alt="Recorrido por el agua dentro de Cueva Rubio">
                         </figure>
                         <h3>Cueva Rubio</h3>
                         <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Chitaraque</p>
@@ -140,14 +151,14 @@
                             <li class="etiquetaRegion">Ricaurte</li>
                             <li class="etiquetaTambien">También: Agua</li>
                         </ul>
-                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Cueva Rubio</span> <span aria-hidden="true">→</span></a>
+                        <a class="enlaceDetalle" href="lugares/tierra-cueva-rubio.html">Ver detalle<span class="soloLectores"> de Cueva Rubio</span> <span aria-hidden="true">→</span></a>
                     </article>
                 </li>
 
                 <li>
                     <article class="tarjetaLugar">
                         <figure class="tarjetaFoto">
-                            <img src="../assets/img/tierra/cueva-de-la-fabrica.jpg" alt="Interior de la Cueva de la Fábrica con río subterráneo">
+                            <img src="../assets/img/tierra/cueva-de-la-fabrica.jpg" alt="Boca de la Cueva de la Fábrica con una caída de agua">
                         </figure>
                         <h3>Cueva de la Fábrica</h3>
                         <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Vía Villa de Leyva – Santa Sofía</p>
@@ -156,14 +167,14 @@
                             <li class="etiquetaDificultad"><span class="barrasDificultad nivel2" aria-hidden="true"></span> Principiante-intermedio</li>
                             <li class="etiquetaRegion">Ricaurte</li>
                         </ul>
-                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Cueva de la Fábrica</span> <span aria-hidden="true">→</span></a>
+                        <a class="enlaceDetalle" href="lugares/tierra-cueva-de-la-fabrica.html">Ver detalle<span class="soloLectores"> de Cueva de la Fábrica</span> <span aria-hidden="true">→</span></a>
                     </article>
                 </li>
 
                 <li>
                     <article class="tarjetaLugar">
                         <figure class="tarjetaFoto">
-                            <img src="../assets/img/tierra/desierto-la-candelaria.jpg" alt="Paredes de roca en el Desierto de La Candelaria">
+                            <img src="../assets/img/tierra/desierto-la-candelaria.jpg" alt="Colinas erosionadas del Desierto de La Candelaria">
                         </figure>
                         <h3>Desierto de La Candelaria</h3>
                         <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Villa de Leyva – Sáchica – Ráquira</p>
@@ -172,14 +183,14 @@
                             <li class="etiquetaDificultad"><span class="barrasDificultad nivel2" aria-hidden="true"></span> Principiante-intermedio</li>
                             <li class="etiquetaRegion">Ricaurte</li>
                         </ul>
-                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Desierto de La Candelaria</span> <span aria-hidden="true">→</span></a>
+                        <a class="enlaceDetalle" href="lugares/tierra-desierto-la-candelaria.html">Ver detalle<span class="soloLectores"> de Desierto de La Candelaria</span> <span aria-hidden="true">→</span></a>
                     </article>
                 </li>
 
                 <li>
                     <article class="tarjetaLugar">
                         <figure class="tarjetaFoto">
-                            <img src="../assets/img/tierra/ecoparque-el-hayal.jpg" alt="Sendero del Ecoparque El Hayal en Santa Sofía">
+                            <img src="../assets/img/tierra/ecoparque-el-hayal.jpg" alt="Visitantes en el sendero aéreo del Ecoparque El Hayal">
                         </figure>
                         <h3>Ecoparque El Hayal</h3>
                         <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Santa Sofía</p>
@@ -188,14 +199,14 @@
                             <li class="etiquetaDificultad"><span class="barrasDificultad nivel2" aria-hidden="true"></span> Principiante-intermedio</li>
                             <li class="etiquetaRegion">Ricaurte</li>
                         </ul>
-                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Ecoparque El Hayal</span> <span aria-hidden="true">→</span></a>
+                        <a class="enlaceDetalle" href="lugares/tierra-ecoparque-el-hayal.html">Ver detalle<span class="soloLectores"> de Ecoparque El Hayal</span> <span aria-hidden="true">→</span></a>
                     </article>
                 </li>
 
                 <li>
                     <article class="tarjetaLugar">
                         <figure class="tarjetaFoto">
-                            <img src="../assets/img/tierra/gachantiva-santa-sofia.jpg" alt="Cueva del Indio en la zona de Gachantivá y Santa Sofía">
+                            <img src="../assets/img/tierra/gachantiva-santa-sofia.jpg" alt="Valle del río Moniquirá entre Gachantivá y Santa Sofía, desde el Paso del Ángel">
                         </figure>
                         <h3>Gachantivá y Santa Sofía</h3>
                         <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Cerca de Villa de Leyva</p>
@@ -204,14 +215,14 @@
                             <li class="etiquetaDificultad"><span class="barrasDificultad nivel2" aria-hidden="true"></span> Intermedio</li>
                             <li class="etiquetaRegion">Ricaurte</li>
                         </ul>
-                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Gachantivá y Santa Sofía</span> <span aria-hidden="true">→</span></a>
+                        <a class="enlaceDetalle" href="lugares/tierra-gachantiva-santa-sofia.html">Ver detalle<span class="soloLectores"> de Gachantivá y Santa Sofía</span> <span aria-hidden="true">→</span></a>
                     </article>
                 </li>
 
                 <li>
                     <article class="tarjetaLugar">
                         <figure class="tarjetaFoto">
-                            <img src="../assets/img/tierra/hoyo-del-aire.jpg" alt="Rápel vertical en el Hoyo del Aire">
+                            <img src="../assets/img/tierra/hoyo-del-aire.jpg" alt="Pared de roca cubierta de vegetación dentro del Hoyo del Aire">
                         </figure>
                         <h3>Hoyo del Aire / Hoyo de la Romera</h3>
                         <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Vía Villa de Leyva – Moniquirá</p>
@@ -220,14 +231,14 @@
                             <li class="etiquetaDificultad"><span class="barrasDificultad nivel4" aria-hidden="true"></span> Avanzado</li>
                             <li class="etiquetaRegion">Ricaurte</li>
                         </ul>
-                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Hoyo del Aire / Hoyo de la Romera</span> <span aria-hidden="true">→</span></a>
+                        <a class="enlaceDetalle" href="lugares/tierra-hoyo-del-aire.html">Ver detalle<span class="soloLectores"> de Hoyo del Aire / Hoyo de la Romera</span> <span aria-hidden="true">→</span></a>
                     </article>
                 </li>
 
                 <li>
                     <article class="tarjetaLugar">
                         <figure class="tarjetaFoto">
-                            <img src="../assets/img/tierra/cueva-del-nitrato.jpg" alt="Entrada de la Cueva del Nitrato en Moniquirá">
+                            <!-- PENDIENTE: no se encontró una foto de este lugar -->
                         </figure>
                         <h3>Cueva del Nitrato</h3>
                         <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Moniquirá</p>
@@ -237,14 +248,14 @@
                             <li class="etiquetaRegion">Ricaurte</li>
                             <li class="etiquetaTambien">También: Agua</li>
                         </ul>
-                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Cueva del Nitrato</span> <span aria-hidden="true">→</span></a>
+                        <a class="enlaceDetalle" href="lugares/tierra-cueva-del-nitrato.html">Ver detalle<span class="soloLectores"> de Cueva del Nitrato</span> <span aria-hidden="true">→</span></a>
                     </article>
                 </li>
 
                 <li>
                     <article class="tarjetaLugar">
                         <figure class="tarjetaFoto">
-                            <img src="../assets/img/tierra/desierto-tatacoita.jpg" alt="Ciclomontañismo en el Desierto de la Tatacoita">
+                            <img src="../assets/img/tierra/desierto-tatacoita.jpg" alt="Formaciones de roca rojiza en el Desierto de la Tatacoita">
                         </figure>
                         <h3>Desierto de la Tatacoita</h3>
                         <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Sáchica</p>
@@ -253,14 +264,14 @@
                             <li class="etiquetaDificultad"><span class="barrasDificultad nivel2" aria-hidden="true"></span> Intermedio</li>
                             <li class="etiquetaRegion">Ricaurte</li>
                         </ul>
-                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de Desierto de la Tatacoita</span> <span aria-hidden="true">→</span></a>
+                        <a class="enlaceDetalle" href="lugares/tierra-desierto-tatacoita.html">Ver detalle<span class="soloLectores"> de Desierto de la Tatacoita</span> <span aria-hidden="true">→</span></a>
                     </article>
                 </li>
 
                 <li>
                     <article class="tarjetaLugar">
                         <figure class="tarjetaFoto">
-                            <img src="../assets/img/tierra/pnn-el-cocuy.jpg" alt="Nevados del Parque Nacional Natural El Cocuy">
+                            <img src="../assets/img/tierra/pnn-el-cocuy.jpg" alt="Glaciar y Laguna Grande de la Sierra en El Cocuy">
                         </figure>
                         <h3>PNN El Cocuy</h3>
                         <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> El Cocuy – Güicán</p>
@@ -269,7 +280,7 @@
                             <li class="etiquetaDificultad"><span class="barrasDificultad nivel4" aria-hidden="true"></span> Avanzado</li>
                             <li class="etiquetaRegion">Gutiérrez</li>
                         </ul>
-                        <a class="enlaceDetalle" href="lugar.html">Ver detalle<span class="soloLectores"> de PNN El Cocuy</span> <span aria-hidden="true">→</span></a>
+                        <a class="enlaceDetalle" href="lugares/tierra-pnn-el-cocuy.html">Ver detalle<span class="soloLectores"> de PNN El Cocuy</span> <span aria-hidden="true">→</span></a>
                     </article>
                 </li>
 
@@ -315,11 +326,68 @@
 
         <div class="pieLinea">
             <p>2026 SumercExtreme · Proyecto integrador 2026-II</p>
-            <p>Fuente principal de datos: SITUR Boyacá</p>
+            <p>Fuente principal de datos: <a href="https://situr.boyaca.gov.co/" target="_blank" rel="noopener">SITUR Boyacá<span class="soloLectores"> (se abre en una pestaña nueva)</span></a></p>
         </div>
     </footer>
 
-    <a class="botonAccesibilidad" href="accesibilidad.html">
+    <!-- Panel de ajustes de accesibilidad: lo abre el botón flotante (js/accesibilidad.js) -->
+    <dialog class="panelAccesibilidad" id="panelAccesibilidad" aria-labelledby="tituloPanelAccesibilidad">
+        <div class="panelEncabezado">
+            <h2 id="tituloPanelAccesibilidad"><span class="icono iconoAccesibilidad" aria-hidden="true"></span> Ajustes de accesibilidad</h2>
+            <button type="button" class="panelCerrar" aria-label="Cerrar el panel de accesibilidad"><span aria-hidden="true">✕</span></button>
+        </div>
+
+        <fieldset class="ajusteTexto">
+            <legend>Tamaño del texto</legend>
+            <div class="opcionesTexto">
+                <input type="radio" id="textoPequeno" name="tamanoTexto" value="pequeno">
+                <label for="textoPequeno"><span aria-hidden="true">A−</span><span class="soloLectores">Texto pequeño</span></label>
+                <input type="radio" id="textoNormal" name="tamanoTexto" value="normal" checked>
+                <label for="textoNormal"><span aria-hidden="true">A</span><span class="soloLectores">Texto normal</span></label>
+                <input type="radio" id="textoGrande" name="tamanoTexto" value="grande">
+                <label for="textoGrande"><span aria-hidden="true">A+</span><span class="soloLectores">Texto grande</span></label>
+            </div>
+        </fieldset>
+
+        <ul class="listaAjustes">
+            <li class="ajuste">
+                <label for="ajusteContraste">
+                    <span class="ajusteNombre">Alto contraste</span>
+                    <span class="ajusteAyuda">Texto negro sobre fondo blanco y bordes más marcados.</span>
+                </label>
+                <input type="checkbox" role="switch" id="ajusteContraste" name="altoContraste">
+            </li>
+            <li class="ajuste">
+                <label for="ajusteSubrayar">
+                    <span class="ajusteNombre">Subrayar enlaces</span>
+                    <span class="ajusteAyuda">Todos los enlaces se muestran subrayados.</span>
+                </label>
+                <input type="checkbox" role="switch" id="ajusteSubrayar" name="subrayarEnlaces">
+            </li>
+            <li class="ajuste">
+                <label for="ajusteEspacio">
+                    <span class="ajusteNombre">Más espacio entre líneas</span>
+                    <span class="ajusteAyuda">Facilita la lectura de textos largos.</span>
+                </label>
+                <input type="checkbox" role="switch" id="ajusteEspacio" name="masEspacio">
+            </li>
+            <li class="ajuste">
+                <label for="ajusteAnimaciones">
+                    <span class="ajusteNombre">Reducir animaciones</span>
+                    <span class="ajusteAyuda">Quita transiciones y movimientos.</span>
+                </label>
+                <input type="checkbox" role="switch" id="ajusteAnimaciones" name="sinAnimaciones">
+            </li>
+        </ul>
+
+        <div class="panelAcciones">
+            <button type="button" class="boton botonBorde panelRestablecer">Restablecer</button>
+            <a class="enlaceDeclaracion" href="accesibilidad.html">Ver declaración <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="panelNota">Tus ajustes se guardan en este computador. Esc cierra este panel.</p>
+    </dialog>
+
+    <a class="botonAccesibilidad" aria-haspopup="dialog" aria-controls="panelAccesibilidad" href="accesibilidad.html">
         <span class="icono iconoAccesibilidad" aria-hidden="true"></span> Accesibilidad
     </a>
 

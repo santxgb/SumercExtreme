@@ -19,6 +19,12 @@
 @import url("components/tarjetaLugar.css");
 @import url("components/etiquetas.css");
 @import url("components/avisoAltura.css");
+@import url("components/fichaLugar.css");
+@import url("components/progreso.css");
+@import url("components/checklist.css");
+@import url("components/formulario.css");
+@import url("components/declaracion.css");
+@import url("components/panelAccesibilidad.css");
 
 @import url("themes/agua.css");
 @import url("themes/tierra.css");

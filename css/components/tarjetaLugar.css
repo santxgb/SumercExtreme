@@ -13,6 +13,7 @@
 }
 
 .tarjetaLugar {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -21,6 +22,32 @@
     border: 1px solid rgba(158, 158, 158, 0.45);
     border-radius: 16px;
     background-color: #ffffff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Toda la tarjeta lleva a la ficha del lugar, igual que las tarjetas del Inicio */
+.tarjetaLugar .enlaceDetalle::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.tarjetaLugar:hover {
+    box-shadow: 0 10px 24px rgba(11, 29, 34, 0.18);
+    transform: translateY(-4px);
+}
+
+.tarjetaLugar:hover .enlaceDetalle {
+    text-decoration: underline;
+}
+
+.tarjetaLugar:has(.enlaceDetalle:focus-visible) {
+    outline: 3px solid #00838f;
+    outline-offset: 3px;
+}
+
+.tarjetaLugar .enlaceDetalle:focus-visible {
+    outline: none;
 }
 
 /* Mientras no esté la foto real se ve el recuadro azul claro con el ícono de imagen */

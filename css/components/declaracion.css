@@ -1,0 +1,131 @@
+/* Página de accesibilidad: compromiso, tabla de teclas, ajustes y banda "¿Encontraste una barrera?" */
+
+.seccionAccesibilidad {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 48px max(20px, calc((100% - 1200px) / 2)) 0;
+}
+
+.seccionAccesibilidad h2 {
+    font-size: 32px;
+}
+
+.seccionAccesibilidad > p {
+    max-width: 1000px;
+    line-height: 1.6;
+}
+
+.seccionAccesibilidad .listaCheck {
+    gap: 12px;
+}
+
+.seccionAccesibilidad .listaCheck li {
+    padding-left: 32px;
+    background-size: 20px;
+    font-size: 17px;
+}
+
+/* Tabla de teclas: filas alternadas y la tecla dibujada como botón de teclado */
+.tablaTeclas {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(0, 131, 143, 0.3);
+    border-radius: 14px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.tablaTeclas tr:nth-child(odd) {
+    background-color: #e2eff1;
+}
+
+.tablaTeclas tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.tablaTeclas th,
+.tablaTeclas td {
+    padding: 12px 18px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.tablaTeclas th {
+    width: 180px;
+    white-space: nowrap;
+}
+
+kbd {
+    display: inline-block;
+    padding: 4px 10px;
+    border: 1px solid rgba(27, 43, 47, 0.45);
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 0 rgba(27, 43, 47, 0.35);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.notaTeclado {
+    font-size: 15px;
+}
+
+/* Banda verde azulada que lleva al buzón */
+.bandaBarrera {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 48px max(20px, calc((100% - 1200px) / 2));
+    padding: 28px 40px;
+    border-radius: 16px;
+    background-color: #00838f;
+    color: #ffffff;
+}
+
+.bandaBarrera .icono {
+    width: 32px;
+    height: 32px;
+    background-image: url("../../assets/iconos/correo.svg");
+}
+
+.bandaBarrera div {
+    flex: 1;
+}
+
+.bandaBarrera h2 {
+    font-size: 27px;
+}
+
+@media (max-width: 700px) {
+    .seccionAccesibilidad {
+        padding-top: 36px;
+    }
+
+    .seccionAccesibilidad h2 {
+        font-size: 28px;
+    }
+
+    .tablaTeclas th {
+        width: auto;
+    }
+
+    .tablaTeclas th,
+    .tablaTeclas td {
+        padding: 10px 12px;
+    }
+
+    .bandaBarrera {
+        flex-wrap: wrap;
+        padding: 24px;
+    }
+
+    .bandaBarrera div {
+        flex-basis: calc(100% - 48px);
+    }
+
+    .bandaBarrera .boton {
+        width: 100%;
+    }
+}

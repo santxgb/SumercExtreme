@@ -12,6 +12,7 @@
 }
 
 .tarjetaElemento {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -20,6 +21,40 @@
     border: 1px solid rgba(158, 158, 158, 0.45);
     border-radius: 20px;
     background-color: #ffffff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Toda la tarjeta lleva a la página del elemento: el enlace del botón se estira
+   con un ::after que cubre la tarjeta completa (sigue siendo un solo enlace) */
+.tarjetaElemento .boton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.tarjetaElemento:hover {
+    box-shadow: 0 10px 24px rgba(11, 29, 34, 0.18);
+    transform: translateY(-4px);
+}
+
+/* El botón se aclara con una sombra interior y no con filter: filter haría que el ::after
+   se ajuste al botón en vez de cubrir toda la tarjeta */
+.tarjetaElemento .boton:hover {
+    filter: none;
+}
+
+.tarjetaElemento:hover .boton {
+    box-shadow: inset 0 0 0 999px rgba(255, 255, 255, 0.15);
+}
+
+/* Con teclado, el contorno de foco se ve en toda la tarjeta */
+.tarjetaElemento:has(.boton:focus-visible) {
+    outline: 3px solid #00838f;
+    outline-offset: 3px;
+}
+
+.tarjetaElemento .boton:focus-visible {
+    outline: none;
 }
 
 /* Foto: mientras no esté la foto real se ve el degradado con el ícono, como en el Figma */

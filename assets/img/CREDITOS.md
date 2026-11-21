@@ -18,7 +18,6 @@ Las fotos se redujeron a 1200 px como máximo y se pasaron a JPG.
 | `tierra/lago-de-tota-senderos.jpg` | CC BY-SA 4.0 | FMontecito | https://commons.wikimedia.org/wiki/File:Lago_de_Tota,_sector_municipio_de_Tota.jpg |  |
 | `tierra/puente-reyes.jpg` | CC BY-SA 3.0 | Petruss | https://commons.wikimedia.org/wiki/File:Rio_Gameza_Puente_Reyes.JPG | Muestra la peña de Puente Reyes, sin escaladores |
 | `tierra/gachantiva-santa-sofia.jpg` | CC0 | Petruss | https://commons.wikimedia.org/wiki/File:Desde_el_Paso_del_Angel.JPG | Paisaje del Paso del Ángel, no la Cueva del Indio |
-| `tierra/hoyo-del-aire.jpg` | CC BY-SA 4.0 | Thomas Wiese | https://commons.wikimedia.org/wiki/File:Hoyo_del_aire.jpg | El Hoyo del Aire queda en La Paz, Santander |
 | `tierra/pnn-el-cocuy.jpg` | CC0 | Paula Perilla Parra | https://commons.wikimedia.org/wiki/File:Sierra_Nevada_del_cocuy,_Sendero_Laguna_Grande_Marzo_2025_2.jpg |  |
 | `viento/parque-guatika.jpg` | CC BY-SA 4.0 | KarlitoX | https://commons.wikimedia.org/wiki/File:Tirolina,_Parque_Zool%C3%B3gico_Gu%C3%A1tika._Tibasosa,_Colombia._20140426.JPG |  |
 | `viento/embalse-de-chivor.jpg` | Public domain | Petruss | https://commons.wikimedia.org/wiki/File:Embalse_la_esmeralda_-_front.jpg |  |
@@ -63,3 +62,5 @@ Las fotos se redujeron a 1200 px como máximo y se pasaron a JPG.
 | `viento/alto-de-carvajal.jpg` | situr.boyaca.gov.co | https://situr.boyaca.gov.co/wp-content/uploads/2017/04/parapente-570x320.jpg | SITUR Boyacá, Alto del Carvajal |
 | `viento/alto-de-carvajal-2.jpg` | boyaca7dias.com.co | https://boyaca7dias.com.co/wp-content/uploads/2024/10/Parapente-en-Pachavita-2.jpg | Festival de parapente en Pachavita |
 | `viento/canon-del-chicamocha-parapente.jpg` | www.destinochicamocha.com | https://destinochicamocha.com/wp-content/uploads/2021/05/3Parapente-Aratoca.jpg | Parapente en el Cañón del Chicamocha, pero del lado de Santander (Aratoca), no de Soatá/Boavita |
+| `tierra/hoyo-de-la-romera.jpg` | elturismoencolombia.com | https://elturismoencolombia.com/wp-content/uploads/2023/06/Hoyo-la-Romera-Boyaca-Colombia.jpg | Interior del Hoyo de la Romera, Santa Sofía |
+| `tierra/hoyo-de-la-romera-2.jpg` | tripadvisor.com | https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/c8/f3/f1/hoyo-de-la-romera.jpg | Boca e interior del Hoyo de la Romera |

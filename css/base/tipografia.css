@@ -27,6 +27,11 @@ img {
     max-width: 100%;
 }
 
+/* Lo que el JS oculta con el atributo hidden (filtros) no se ve aunque su CSS diga display: flex */
+[hidden] {
+    display: none !important;
+}
+
 a {
     color: inherit;
 }

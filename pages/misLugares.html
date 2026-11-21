@@ -7,6 +7,7 @@
     <meta name="description" content="Marca los lugares de turismo extremo en Boyacá que ya visitaste y lleva tu propio registro de aventuras.">
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/accesibilidad.js"></script>
+    <script src="../js/visitados.js" defer></script>
 </head>
 <body class="paginaMisLugares">
 
@@ -38,7 +39,7 @@
             <p class="heroTexto">Marca los lugares que ya visitaste y lleva tu propio registro de aventuras. Tu lista se guarda solo en este computador.</p>
 
             <div class="tarjetaProgreso">
-                <p id="textoProgreso">Has visitado <strong>0</strong> de <strong>34</strong> lugares</p>
+                <p id="textoProgreso">Has visitado <strong class="conteoVisitados">0</strong> de <strong>34</strong> lugares</p>
                 <progress class="barraProgreso" max="34" value="0" aria-labelledby="textoProgreso">0 de 34</progress>
             </div>
         </section>
@@ -46,19 +47,21 @@
         <section class="filtros" aria-labelledby="tituloFiltros">
             <h2 id="tituloFiltros" class="soloLectores">Filtrar mis lugares</h2>
             <ul class="listaFiltros">
-                <li><button type="button" class="chipFiltro" aria-pressed="true">Todos (34)</button></li>
-                <li><button type="button" class="chipFiltro" aria-pressed="false">Agua (10)</button></li>
-                <li><button type="button" class="chipFiltro" aria-pressed="false">Tierra (13)</button></li>
-                <li><button type="button" class="chipFiltro" aria-pressed="false">Viento (11)</button></li>
-                <li><button type="button" class="chipFiltro" aria-pressed="false">Solo visitados (0)</button></li>
+                <li><button type="button" class="chipFiltro" data-filtro="todos" aria-pressed="true">Todos (34)</button></li>
+                <li><button type="button" class="chipFiltro" data-filtro="agua" aria-pressed="false">Agua (10)</button></li>
+                <li><button type="button" class="chipFiltro" data-filtro="tierra" aria-pressed="false">Tierra (13)</button></li>
+                <li><button type="button" class="chipFiltro" data-filtro="viento" aria-pressed="false">Viento (11)</button></li>
+                <li><button type="button" class="chipFiltro" data-filtro="visitados" aria-pressed="false">Solo visitados (<span class="conteoVisitados">0</span>)</button></li>
             </ul>
         </section>
+
+        <p class="mensajeVacio" hidden>Todavía no has marcado ningún lugar como visitado. Marca la casilla de los lugares que ya conoces.</p>
 
         <!-- Cada fila: casilla + nombre + insignia "Visitado" + enlace.
              La insignia está en todas las filas; el CSS la muestra solo cuando la casilla
              está marcada, con el selector: .itemLugar input:checked ~ .etiquetaVisitado -->
 
-        <section class="grupoElemento temaAgua" aria-labelledby="tituloGrupoAgua">
+        <section class="grupoElemento temaAgua" data-elemento="agua" aria-labelledby="tituloGrupoAgua">
             <header class="grupoEncabezado">
                 <h2 id="tituloGrupoAgua"><span class="icono iconoAgua" aria-hidden="true"></span> Agua</h2>
                 <p class="grupoConteo">0 de 10 visitados</p>
@@ -169,7 +172,7 @@
             <a class="enlaceGrupo" href="agua.html">Ver los 10 lugares de Agua</a>
         </section>
 
-        <section class="grupoElemento temaTierra" aria-labelledby="tituloGrupoTierra">
+        <section class="grupoElemento temaTierra" data-elemento="tierra" aria-labelledby="tituloGrupoTierra">
             <header class="grupoEncabezado">
                 <h2 id="tituloGrupoTierra"><span class="icono iconoTierra" aria-hidden="true"></span> Tierra</h2>
                 <p class="grupoConteo">0 de 13 visitados</p>
@@ -310,7 +313,7 @@
             <a class="enlaceGrupo" href="tierra.html">Ver los 13 lugares de Tierra</a>
         </section>
 
-        <section class="grupoElemento temaViento" aria-labelledby="tituloGrupoViento">
+        <section class="grupoElemento temaViento" data-elemento="viento" aria-labelledby="tituloGrupoViento">
             <header class="grupoEncabezado">
                 <h2 id="tituloGrupoViento"><span class="icono iconoViento" aria-hidden="true"></span> Viento</h2>
                 <p class="grupoConteo">0 de 11 visitados</p>

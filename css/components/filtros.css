@@ -41,8 +41,11 @@
     color: #ffffff;
 }
 
+/* El chulo es solo visual: con "/ \"\"" los lectores de pantalla no lo leen (el botón ya dice "presionado").
+   La primera línea queda para navegadores viejos que no entienden la segunda */
 .chipFiltro[aria-pressed="true"]::before {
     content: "✓ ";
+    content: "✓ " / "";
 }
 
 @media (max-width: 700px) {

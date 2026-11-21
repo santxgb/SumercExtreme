@@ -107,7 +107,16 @@ function conectarBuzon() {
         }
     });
 
-    formulario.addEventListener("reset", () => {
+    // "Borrar formulario" pregunta antes, para no perder por error lo que ya se escribió
+    formulario.addEventListener("reset", (evento) => {
+        const hayTexto = ["nombreLugar", "mensaje", "correo"].some(
+            (nombre) => formulario.elements[nombre].value.trim() !== ""
+        );
+        if (hayTexto && !window.confirm("¿Quieres borrar todo lo que escribiste en el formulario?")) {
+            evento.preventDefault();
+            return;
+        }
+
         yaIntento = false;
         for (const regla of REGLAS) {
             mostrarError(regla.campo(formulario), "");

@@ -127,4 +127,34 @@ function conectarMisLugares() {
     actualizarResumen();
 }
 
+/* ---- Ficha de cada lugar: "Marcar como visitado" ---- */
+
+function conectarFicha() {
+    const casilla = document.querySelector("#marcarVisitado[data-lugar]");
+    if (!casilla) {
+        return;
+    }
+
+    const lugar = casilla.dataset.lugar;
+    casilla.checked = leerVisitados().has(lugar);
+
+    casilla.addEventListener("change", () => {
+        const visitados = leerVisitados();
+        if (casilla.checked) {
+            visitados.add(lugar);
+        } else {
+            visitados.delete(lugar);
+        }
+        guardarVisitados(visitados);
+    });
+
+    // Si cambia en Mis lugares abierta en otra pestaña, la casilla se actualiza
+    window.addEventListener("storage", (evento) => {
+        if (evento.key === CLAVE_VISITADOS) {
+            casilla.checked = leerVisitados().has(lugar);
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", conectarMisLugares);
+document.addEventListener("DOMContentLoaded", conectarFicha);

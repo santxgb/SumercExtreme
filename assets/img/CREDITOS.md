@@ -63,3 +63,4 @@ Las fotos se redujeron a 1200 px como máximo y se pasaron a JPG.
 | `viento/canon-del-chicamocha-parapente.jpg` | www.destinochicamocha.com | https://destinochicamocha.com/wp-content/uploads/2021/05/3Parapente-Aratoca.jpg | Parapente en el Cañón del Chicamocha, pero del lado de Santander (Aratoca), no de Soatá/Boavita |
 | `tierra/hoyo-de-la-romera.jpg` | elturismoencolombia.com | https://elturismoencolombia.com/wp-content/uploads/2023/06/Hoyo-la-Romera-Boyaca-Colombia.jpg | Interior del Hoyo de la Romera, Santa Sofía |
 | `tierra/hoyo-de-la-romera-2.jpg` | tripadvisor.com | https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/c8/f3/f1/hoyo-de-la-romera.jpg | Boca e interior del Hoyo de la Romera |
+| `tierra/cueva-de-miravalles.jpg` | boyaca7dias.com.co | https://boyaca7dias.com.co/wp-content/uploads/2021/07/cuevas-mira-valle-vereda-mira-valle.jpg | Cueva de Miravalles, Moniquirá |

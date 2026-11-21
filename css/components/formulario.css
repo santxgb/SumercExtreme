@@ -77,8 +77,11 @@
     border-color: #00838f;
 }
 
-/* Campo con error (lo marca js/buzon.js) */
-.campo [aria-invalid="true"] {
+/* Campo con error (lo marca js/buzon.js). Va después de :focus para ganarle al borde normal */
+.campo input[aria-invalid="true"],
+.campo textarea[aria-invalid="true"],
+.campo select[aria-invalid="true"] {
+    border-width: 2px;
     border-color: #b3261e;
 }
 

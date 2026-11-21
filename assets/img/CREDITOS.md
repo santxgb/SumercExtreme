@@ -47,7 +47,6 @@ Las fotos se redujeron a 1200 px como máximo y se pasaron a JPG.
 | `tierra/ecoparque-el-hayal.jpg` | pasodelangel.com | https://pasodelangel.com/assets/sendero-aereo-jxSGp7qw.jpg | Sendero aéreo del EcoParque El Hayal (sitio oficial) |
 | `tierra/ecoparque-el-hayal-2.jpg` | pasodelangel.com | https://pasodelangel.com/assets/escalera-al-cielo-L6U5cUg4.jpg | Escalera al cielo, EcoParque El Hayal (sitio oficial) |
 | `tierra/desierto-la-candelaria.jpg` | goboy.com.co | https://goboy.com.co/wp-content/uploads/2023/10/desierto5-1200x583.jpg | Desierto de La Candelaria (GoBOY) |
-| `tierra/desierto-tatacoita.jpg` | chipviajero.com | https://chipviajero.com/wp-content/uploads/2017/09/Como-Llegar-Al-Desierto-De-La-Tatacoita-Nemoc%C3%B3n-Chip-Viajero-8.jpg | Desierto de la Tatacoita, pero en Nemocón (Cundinamarca), no en Sáchica |
 | `viento/parapente-ventaquemada.jpg` | situr.boyaca.gov.co | https://situr.boyaca.gov.co/wp-content/uploads/2021/04/Parapente-Boyac%C3%A1-Ventaquemada-500x500.jpg | SITUR Boyacá, parapente en Ventaquemada |
 | `viento/parapente-ventaquemada-2.jpg` | www.tripadvisor.at | https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/2d/20/69/parapente-boyaca.jpg | Parapente Boyacá, Ventaquemada (TripAdvisor) |
 | `viento/zona-de-vuelo-ventaquemada.jpg` | www.tripadvisor.com.gr | https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/44/29/d1/ven-a-volar-como-las.jpg | Parapente Boyacá, Ventaquemada (TripAdvisor) |

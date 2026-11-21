@@ -49,7 +49,7 @@ function conectarMisLugares() {
     function actualizarResumen() {
         const marcadas = [...casillas].filter((casilla) => casilla.checked).length;
 
-        // "Has visitado X de 34 lugares" y "Solo visitados (X)"
+        // "Has visitado X de N lugares" y "Solo visitados (X)"
         for (const conteo of document.querySelectorAll(".conteoVisitados")) {
             conteo.textContent = marcadas;
         }

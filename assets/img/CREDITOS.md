@@ -32,7 +32,6 @@ Las fotos se redujeron a 1200 px como máximo y se pasaron a JPG.
 | `agua/cueva-rubio-cavernas.jpg` | www.viajarenverano.com | https://www.viajarenverano.com/wp-content/uploads/2019/12/Grupo.jpg | Grupo con cascos dentro de la cueva, Chitaraque |
 | `agua/cascadas-chitaraque.jpg` | www.las2orillas.co | https://www.las2orillas.co/wp-content/uploads/2024/07/laja-blanca-chitaraquq.jpg | Cascada Laja Blanca, Chitaraque |
 | `agua/cascadas-chitaraque-2.jpg` | situr.boyaca.gov.co | https://situr.boyaca.gov.co/wp-content/uploads/2022/11/9.jpg | SITUR Boyacá, página de Chitaraque |
-| `agua/rafting-rio-suarez.jpg` | sangildeportesextremos.com | https://www.sangildeportesextremos.com/wp-content/uploads/2023/09/rafting-suarez.jpg | Rafting en el río Suárez, pero en el sector de San Gil (Santander), no en Moniquirá |
 | `agua/cascadas-la-70-las-juntas.jpg` | boyaca7dias.com.co | https://i0.wp.com/boyaca7dias.com.co/wp-content/uploads/2020/03/cascada-la-70-13.jpg | Cascada La 70 con visitantes |
 | `agua/rafting-rio-lengupa.jpg` | macanatravelsas.com | https://macanatravelsas.com/wp-content/uploads/2025/02/21.jpg | Rafting en el río Lengupá (operador Macana Travel) |
 | `agua/rafting-rio-lengupa-2.jpg` | macanatravelsas.com | https://macanatravelsas.com/wp-content/uploads/2025/02/22.jpg | Rafting en el río Lengupá (operador Macana Travel) |
@@ -64,3 +63,5 @@ Las fotos se redujeron a 1200 px como máximo y se pasaron a JPG.
 | `tierra/hoyo-de-la-romera.jpg` | elturismoencolombia.com | https://elturismoencolombia.com/wp-content/uploads/2023/06/Hoyo-la-Romera-Boyaca-Colombia.jpg | Interior del Hoyo de la Romera, Santa Sofía |
 | `tierra/hoyo-de-la-romera-2.jpg` | tripadvisor.com | https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/c8/f3/f1/hoyo-de-la-romera.jpg | Boca e interior del Hoyo de la Romera |
 | `tierra/cueva-de-miravalles.jpg` | boyaca7dias.com.co | https://boyaca7dias.com.co/wp-content/uploads/2021/07/cuevas-mira-valle-vereda-mira-valle.jpg | Cueva de Miravalles, Moniquirá |
+| `agua/moniquira-salto-de-los-micos.jpg` | boyaca7dias.com.co | https://boyaca7dias.com.co/wp-content/uploads/2021/07/Salto-de-los-Micos-1.jpg | Salto de los Micos, Moniquirá |
+| `agua/moniquira-cascada-el-cajon.jpg` | colombiaone.com (foto de Darvin Salamanca) | https://colombiaone.com/wp-content/uploads/2024/05/el-cajon-waterfall-credit-darvin-salamanca-edited-scaled.jpg | Cascada El Cajón, Moniquirá |

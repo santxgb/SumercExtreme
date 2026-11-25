@@ -76,9 +76,10 @@
     gap: 10px;
 }
 
-/* Separador "›" entre cada paso de la ruta */
+/* Separador "›" entre cada paso de la ruta (decorativo: los lectores de pantalla no lo leen) */
 .migasPan li + li::before {
     content: "›";
+    content: "›" / "";
 }
 
 .migasPan a {

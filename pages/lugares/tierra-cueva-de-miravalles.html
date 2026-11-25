@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sáchica (Desierto de la Tatacoita) · Tierra | SumercExtreme</title>
-    <meta name="description" content="Dificultad, seguridad, precio aproximado y cómo llegar a Sáchica (Desierto de la Tatacoita), en Boyacá.">
+    <title>Cueva de Miravalles (Moniquirá) · Tierra | SumercExtreme</title>
+    <meta name="description" content="Dificultad, seguridad y cómo llegar a Cueva de Miravalles (Moniquirá), en Boyacá.">
     <link rel="stylesheet" href="../../css/main.css">
     <script src="../../js/accesibilidad.js"></script>
+    <script src="../../js/visitados.js" defer></script>
 </head>
 <body class="paginaLugar temaTierra">
 
@@ -38,13 +39,14 @@
                 <ol>
                     <li><a href="../../index.html">Inicio</a></li>
                     <li><a href="../tierra.html">Tierra</a></li>
-                    <li aria-current="page">Sáchica (Desierto de la Tatacoita)</li>
+                    <li aria-current="page">Cueva de Miravalles (Moniquirá)</li>
                 </ol>
             </nav>
-            <h1 id="tituloPrincipal">Sáchica (Desierto de la Tatacoita)</h1>
-            <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Provincia de Ricaurte, cerca de Villa de Leyva · Región Ricaurte</p>
+            <h1 id="tituloPrincipal">Cueva de Miravalles (Moniquirá)</h1>
+            <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Vereda Naranjal, Moniquirá · Región Ricaurte</p>
             <ul class="listaEtiquetas">
                 <li class="etiquetaElemento etiquetaTierra"><span class="icono iconoTierra" aria-hidden="true"></span> Tierra</li>
+                <li class="etiquetaElemento etiquetaTambienEn">También Agua</li>
             </ul>
         </section>
 
@@ -56,18 +58,21 @@
                     <h2 id="tituloGaleria" class="soloLectores">Fotos del lugar</h2>
 
                     <figure class="fotoPrincipal">
-                        <img src="../../assets/img/tierra/desierto-tatacoita.jpg" alt="Formaciones de roca rojiza en el Desierto de la Tatacoita">
+                        <img src="../../assets/img/tierra/cueva-de-miravalles.jpg" alt="Boca de la Cueva de Miravalles con una caída de agua, en Moniquirá">
                     </figure>
 
-                    <!-- PENDIENTE: video real de la actividad, con subtítulos (WCAG 1.2.2) -->
                 </section>
 
                 <section class="seccionLugar" aria-labelledby="tituloActividades">
                     <h2 id="tituloActividades">Qué puedes hacer aquí</h2>
                     <ul class="listaEtiquetas">
-                        <li class="etiquetaActividad">Ciclomontañismo de descenso</li>
-                        <li class="etiquetaActividad">Cuatrimotos</li>
+                        <li class="etiquetaActividad">Espeleología</li>
+                        <li class="etiquetaActividad">Recorrido por cueva activa con agua</li>
                     </ul>
+                    <div class="avisoLugar">
+                        <span class="icono iconoAlerta" aria-hidden="true"></span>
+                        <p><strong>Ten en cuenta</strong> Es una cueva activa de más de 2 km: por dentro circula agua. Entra solo con guía.</p>
+                    </div>
                 </section>
 
                 <section class="seccionLugar cajaSeguridad" aria-labelledby="tituloSeguridad">
@@ -78,14 +83,23 @@
                         <li>Contrata operadores registrados (RNT) y respeta las normas del lugar.</li>
                         <li>Lleva agua, protección solar y ropa adecuada para el clima.</li>
                     </ul>
-                    <p class="notaFuente">[Recomendaciones generales: validar con el operador y fuentes oficiales]</p>
+                    <p class="notaFuente">Son recomendaciones generales: confírmalas con el operador antes de ir.</p>
                 </section>
 
                 <section class="seccionLugar" aria-labelledby="tituloComoLlegar">
                     <h2 id="tituloComoLlegar">Cómo llegar</h2>
                     <div class="mapaLugar">
-                        <iframe src="https://www.google.com/maps?q=S%C3%A1chica%2C+Boyac%C3%A1&amp;output=embed" title="Mapa con la ubicación de Sáchica (Desierto de la Tatacoita)" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps?q=Cueva+de+Miravalles%2C+Moniquir%C3%A1%2C+Boyac%C3%A1&amp;output=embed" title="Mapa con la ubicación de Cueva de Miravalles (Moniquirá)" loading="lazy"></iframe>
                     </div>
+                </section>
+
+                <section class="bandaTambien temaAgua" aria-labelledby="tituloTambien1">
+                    <span class="icono iconoAgua" aria-hidden="true"></span>
+                    <div>
+                        <h2 id="tituloTambien1">También en este lugar: Agua</h2>
+                        <p>Torrentismo y canyoning en las cascadas y cañones de Moniquirá.</p>
+                    </div>
+                    <a class="boton botonAmarillo" href="agua-moniquira.html">Ver en Agua</a>
                 </section>
 
                 <p class="volver"><a class="boton botonBorde" href="../tierra.html"><span aria-hidden="true">←</span> Volver a Tierra</a></p>
@@ -98,33 +112,25 @@
                     <div class="datoLugar">
                         <dt>Dificultad</dt>
                         <dd>
-                            <p class="datoValor"><span class="barrasDificultad nivel2" aria-hidden="true"></span> Intermedio</p>
-                        </dd>
-                    </div>
-                    <div class="datoLugar">
-                        <dt>Precio aproximado</dt>
-                        <dd>
-                            <!-- PENDIENTE: valor aproximado verificado (fuente: SITUR u operador) -->
-                            <p class="datoValor datoPrecio">[Por confirmar]</p>
-                            <p class="datoAyuda">Valor de referencia por persona. Confírmalo con el operador antes de ir.</p>
+                            <p class="datoValor"><span class="barrasDificultad nivel3" aria-hidden="true"></span> Intermedio–avanzado</p>
                         </dd>
                     </div>
                     <div class="datoLugar">
                         <dt>Ubicación</dt>
                         <dd>
-                            <p class="datoValor">Provincia de Ricaurte, cerca de Villa de Leyva</p>
+                            <p class="datoValor">Vereda Naranjal, Moniquirá</p>
                             <p class="datoAyuda">Región Ricaurte, Boyacá</p>
                         </dd>
                     </div>
                 </dl>
 
                 <div class="marcarVisitado">
-                    <input type="checkbox" id="marcarVisitado" name="marcarVisitado" data-lugar="tierra-desierto-tatacoita">
+                    <input type="checkbox" id="marcarVisitado" name="marcarVisitado" data-lugar="tierra-cueva-de-miravalles">
                     <label for="marcarVisitado">Marcar como visitado</label>
                 </div>
 
                 <p><a class="enlaceReportar" href="../buzon.html">¿Algún dato está mal? Escríbenos</a></p>
-                <p class="notaFuente">Fuente: Investigación del equipo</p>
+                <p class="notaFuente">Fuente: SITUR Boyacá (portafolio turístico de Moniquirá)</p>
             </aside>
 
         </div>
@@ -229,9 +235,11 @@
         <p class="panelNota">Tus ajustes se guardan en este computador. Esc cierra este panel.</p>
     </dialog>
 
-    <a class="botonAccesibilidad" aria-haspopup="dialog" aria-controls="panelAccesibilidad" href="../accesibilidad.html">
-        <span class="icono iconoAccesibilidad" aria-hidden="true"></span> Accesibilidad
-    </a>
+    <aside aria-label="Ajustes de accesibilidad">
+        <a class="botonAccesibilidad" aria-haspopup="dialog" aria-controls="panelAccesibilidad" href="../accesibilidad.html">
+            <span class="icono iconoAccesibilidad" aria-hidden="true"></span> Accesibilidad
+        </a>
+    </aside>
 
 </body>
 </html>

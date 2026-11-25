@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Parque de escalada Cucaita · Tierra | SumercExtreme</title>
-    <meta name="description" content="Dificultad, seguridad, precio aproximado y cómo llegar a Parque de escalada Cucaita, en Boyacá.">
+    <meta name="description" content="Dificultad, seguridad y cómo llegar a Parque de escalada Cucaita, en Boyacá.">
     <link rel="stylesheet" href="../../css/main.css">
     <script src="../../js/accesibilidad.js"></script>
+    <script src="../../js/visitados.js" defer></script>
+    <script src="../../js/galeria.js" defer></script>
 </head>
 <body class="paginaLugar temaTierra">
 
@@ -63,7 +65,6 @@
                         <li><img src="../../assets/img/tierra/cucaita-parque-escalada-2.jpg" alt="Roca del parque de escalada de Cucaita"></li>
                     </ul>
 
-                    <!-- PENDIENTE: video real de la actividad, con subtítulos (WCAG 1.2.2) -->
                 </section>
 
                 <section class="seccionLugar" aria-labelledby="tituloActividades">
@@ -81,7 +82,7 @@
                         <li>Contrata operadores registrados (RNT) y respeta las normas del lugar.</li>
                         <li>Lleva agua, protección solar y ropa adecuada para el clima.</li>
                     </ul>
-                    <p class="notaFuente">[Recomendaciones generales: validar con el operador y fuentes oficiales]</p>
+                    <p class="notaFuente">Son recomendaciones generales: confírmalas con el operador antes de ir.</p>
                 </section>
 
                 <section class="seccionLugar" aria-labelledby="tituloComoLlegar">
@@ -102,14 +103,6 @@
                         <dt>Dificultad</dt>
                         <dd>
                             <p class="datoValor"><span class="barrasDificultad nivel3" aria-hidden="true"></span> Intermedio–avanzado</p>
-                        </dd>
-                    </div>
-                    <div class="datoLugar">
-                        <dt>Precio aproximado</dt>
-                        <dd>
-                            <!-- PENDIENTE: valor aproximado verificado (fuente: SITUR u operador) -->
-                            <p class="datoValor datoPrecio">[Por confirmar]</p>
-                            <p class="datoAyuda">Valor de referencia por persona. Confírmalo con el operador antes de ir.</p>
                         </dd>
                     </div>
                     <div class="datoLugar">
@@ -232,9 +225,11 @@
         <p class="panelNota">Tus ajustes se guardan en este computador. Esc cierra este panel.</p>
     </dialog>
 
-    <a class="botonAccesibilidad" aria-haspopup="dialog" aria-controls="panelAccesibilidad" href="../accesibilidad.html">
-        <span class="icono iconoAccesibilidad" aria-hidden="true"></span> Accesibilidad
-    </a>
+    <aside aria-label="Ajustes de accesibilidad">
+        <a class="botonAccesibilidad" aria-haspopup="dialog" aria-controls="panelAccesibilidad" href="../accesibilidad.html">
+            <span class="icono iconoAccesibilidad" aria-hidden="true"></span> Accesibilidad
+        </a>
+    </aside>
 
 </body>
 </html>

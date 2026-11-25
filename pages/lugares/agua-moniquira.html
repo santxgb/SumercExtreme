@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Moniquirá (Cueva del Nitrato) · Tierra | SumercExtreme</title>
-    <meta name="description" content="Dificultad, seguridad, precio aproximado y cómo llegar a Moniquirá (Cueva del Nitrato), en Boyacá.">
+    <title>Moniquirá (cañones y cascadas) · Agua | SumercExtreme</title>
+    <meta name="description" content="Dificultad, seguridad y cómo llegar a Moniquirá (cañones y cascadas), en Boyacá.">
     <link rel="stylesheet" href="../../css/main.css">
     <script src="../../js/accesibilidad.js"></script>
+    <script src="../../js/visitados.js" defer></script>
+    <script src="../../js/galeria.js" defer></script>
 </head>
-<body class="paginaLugar temaTierra">
+<body class="paginaLugar temaAgua">
 
     <a class="saltarContenido" href="#contenido">Saltar al contenido principal</a>
 
@@ -20,8 +22,8 @@
 
         <nav aria-label="Principal">
             <ul class="menuElementos">
-                <li><a href="../agua.html"><span class="icono iconoAgua" aria-hidden="true"></span>Agua</a></li>
-                <li><a href="../tierra.html" aria-current="true"><span class="icono iconoTierra" aria-hidden="true"></span>Tierra</a></li>
+                <li><a href="../agua.html" aria-current="true"><span class="icono iconoAgua" aria-hidden="true"></span>Agua</a></li>
+                <li><a href="../tierra.html"><span class="icono iconoTierra" aria-hidden="true"></span>Tierra</a></li>
                 <li><a href="../viento.html"><span class="icono iconoViento" aria-hidden="true"></span>Viento</a></li>
             </ul>
             <ul class="menuAcciones">
@@ -37,15 +39,15 @@
             <nav class="migasPan" aria-label="Ruta de navegación">
                 <ol>
                     <li><a href="../../index.html">Inicio</a></li>
-                    <li><a href="../tierra.html">Tierra</a></li>
-                    <li aria-current="page">Moniquirá (Cueva del Nitrato)</li>
+                    <li><a href="../agua.html">Agua</a></li>
+                    <li aria-current="page">Moniquirá (cañones y cascadas)</li>
                 </ol>
             </nav>
-            <h1 id="tituloPrincipal">Moniquirá (Cueva del Nitrato)</h1>
-            <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Provincia de Ricaurte · Región Ricaurte</p>
+            <h1 id="tituloPrincipal">Moniquirá (cañones y cascadas)</h1>
+            <p class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Moniquirá · Región Ricaurte</p>
             <ul class="listaEtiquetas">
-                <li class="etiquetaElemento etiquetaTierra"><span class="icono iconoTierra" aria-hidden="true"></span> Tierra</li>
-                <li class="etiquetaElemento etiquetaTambienEn">También Agua</li>
+                <li class="etiquetaElemento etiquetaAgua"><span class="icono iconoAgua" aria-hidden="true"></span> Agua</li>
+                <li class="etiquetaElemento etiquetaTambienEn">También Tierra</li>
             </ul>
         </section>
 
@@ -56,50 +58,52 @@
                 <section class="galeria" aria-labelledby="tituloGaleria">
                     <h2 id="tituloGaleria" class="soloLectores">Fotos del lugar</h2>
 
-                    <!-- PENDIENTE: no se encontró una foto de este lugar -->
-                    <figure class="fotoPrincipal sinFoto">
-                        <figcaption>Foto pendiente</figcaption>
+                    <figure class="fotoPrincipal">
+                        <img src="../../assets/img/agua/moniquira-salto-de-los-micos.jpg" alt="Visitantes frente al Salto de los Micos, en Moniquirá">
                     </figure>
 
-                    <!-- PENDIENTE: video real de la actividad, con subtítulos (WCAG 1.2.2) -->
+                    <ul class="listaMiniaturas">
+                        <li><img src="../../assets/img/agua/moniquira-cascada-el-cajon.jpg" alt="Cascada El Cajón entre la vegetación de Moniquirá"></li>
+                    </ul>
+
                 </section>
 
                 <section class="seccionLugar" aria-labelledby="tituloActividades">
                     <h2 id="tituloActividades">Qué puedes hacer aquí</h2>
                     <ul class="listaEtiquetas">
-                        <li class="etiquetaActividad">Espeleología</li>
-                        <li class="etiquetaActividad">Senderismo selvático</li>
+                        <li class="etiquetaActividad">Torrentismo (cascadas El Cajón y Los Micos)</li>
+                        <li class="etiquetaActividad">Canyoning con rápel (Cañón del Ombligo)</li>
                     </ul>
                 </section>
 
                 <section class="seccionLugar cajaSeguridad" aria-labelledby="tituloSeguridad">
                     <h2 id="tituloSeguridad"><span class="icono iconoEscudo" aria-hidden="true"></span> Condiciones de seguridad</h2>
                     <ul class="listaCheck">
-                        <li>Usa casco y, en escalada o rápel, arnés y cuerdas certificadas.</li>
-                        <li>En cuevas lleva linterna frontal y no entres sin guía.</li>
-                        <li>Contrata operadores registrados (RNT) y respeta las normas del lugar.</li>
-                        <li>Lleva agua, protección solar y ropa adecuada para el clima.</li>
+                        <li>Usa chaleco salvavidas y casco cuando el operador lo indique.</li>
+                        <li>No practiques la actividad con lluvias fuertes o crecientes del río.</li>
+                        <li>Contrata operadores registrados (RNT / SITUR Boyacá).</li>
+                        <li>Informa al guía si no sabes nadar o tienes alguna condición médica.</li>
                     </ul>
-                    <p class="notaFuente">[Recomendaciones generales: validar con el operador y fuentes oficiales]</p>
+                    <p class="notaFuente">Son recomendaciones generales: confírmalas con el operador antes de ir.</p>
                 </section>
 
                 <section class="seccionLugar" aria-labelledby="tituloComoLlegar">
                     <h2 id="tituloComoLlegar">Cómo llegar</h2>
                     <div class="mapaLugar">
-                        <iframe src="https://www.google.com/maps?q=Moniquir%C3%A1%2C+Boyac%C3%A1&amp;output=embed" title="Mapa con la ubicación de Moniquirá (Cueva del Nitrato)" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps?q=Moniquir%C3%A1%2C+Boyac%C3%A1&amp;output=embed" title="Mapa con la ubicación de Moniquirá (cañones y cascadas)" loading="lazy"></iframe>
                     </div>
                 </section>
 
-                <section class="bandaTambien temaAgua" aria-labelledby="tituloTambien1">
-                    <span class="icono iconoAgua" aria-hidden="true"></span>
+                <section class="bandaTambien temaTierra" aria-labelledby="tituloTambien1">
+                    <span class="icono iconoTierra" aria-hidden="true"></span>
                     <div>
-                        <h2 id="tituloTambien1">También en este lugar: Agua</h2>
-                        <p>Rafting en la cuenca alta del río Suárez.</p>
+                        <h2 id="tituloTambien1">También en este lugar: Tierra</h2>
+                        <p>Espeleología en la Cueva de Miravalles.</p>
                     </div>
-                    <a class="boton botonAmarillo" href="agua-moniquira-rio-suarez.html">Ver en Agua</a>
+                    <a class="boton botonAmarillo" href="tierra-cueva-de-miravalles.html">Ver en Tierra</a>
                 </section>
 
-                <p class="volver"><a class="boton botonBorde" href="../tierra.html"><span aria-hidden="true">←</span> Volver a Tierra</a></p>
+                <p class="volver"><a class="boton botonBorde" href="../agua.html"><span aria-hidden="true">←</span> Volver a Agua</a></p>
 
             </div>
 
@@ -113,29 +117,21 @@
                         </dd>
                     </div>
                     <div class="datoLugar">
-                        <dt>Precio aproximado</dt>
-                        <dd>
-                            <!-- PENDIENTE: valor aproximado verificado (fuente: SITUR u operador) -->
-                            <p class="datoValor datoPrecio">[Por confirmar]</p>
-                            <p class="datoAyuda">Valor de referencia por persona. Confírmalo con el operador antes de ir.</p>
-                        </dd>
-                    </div>
-                    <div class="datoLugar">
                         <dt>Ubicación</dt>
                         <dd>
-                            <p class="datoValor">Provincia de Ricaurte</p>
+                            <p class="datoValor">Moniquirá</p>
                             <p class="datoAyuda">Región Ricaurte, Boyacá</p>
                         </dd>
                     </div>
                 </dl>
 
                 <div class="marcarVisitado">
-                    <input type="checkbox" id="marcarVisitado" name="marcarVisitado" data-lugar="tierra-cueva-del-nitrato">
+                    <input type="checkbox" id="marcarVisitado" name="marcarVisitado" data-lugar="agua-moniquira">
                     <label for="marcarVisitado">Marcar como visitado</label>
                 </div>
 
                 <p><a class="enlaceReportar" href="../buzon.html">¿Algún dato está mal? Escríbenos</a></p>
-                <p class="notaFuente">Fuente: Investigación del equipo</p>
+                <p class="notaFuente">Fuente: SITUR Boyacá (portafolio turístico de Moniquirá)</p>
             </aside>
 
         </div>
@@ -240,9 +236,11 @@
         <p class="panelNota">Tus ajustes se guardan en este computador. Esc cierra este panel.</p>
     </dialog>
 
-    <a class="botonAccesibilidad" aria-haspopup="dialog" aria-controls="panelAccesibilidad" href="../accesibilidad.html">
-        <span class="icono iconoAccesibilidad" aria-hidden="true"></span> Accesibilidad
-    </a>
+    <aside aria-label="Ajustes de accesibilidad">
+        <a class="botonAccesibilidad" aria-haspopup="dialog" aria-controls="panelAccesibilidad" href="../accesibilidad.html">
+            <span class="icono iconoAccesibilidad" aria-hidden="true"></span> Accesibilidad
+        </a>
+    </aside>
 
 </body>
 </html>

@@ -73,8 +73,20 @@ main :focus-visible {
     border-bottom-color: #000000;
 }
 
-.altoContraste :focus-visible {
+/* El contorno negro va solo en el contenido claro: en el menú, el pie y el encabezado oscuros
+   no se vería, así que ahí se queda el lima */
+.altoContraste main :focus-visible {
     outline-color: #000000;
+}
+
+/* En el encabezado de color (hero) el contorno va en lima para que se vea sobre el degradado,
+   también con alto contraste. En Viento el fondo es celeste claro, así que va en oscuro */
+main .hero :focus-visible {
+    outline-color: #d4e157;
+}
+
+.temaViento .hero :focus-visible {
+    outline-color: #0b1d22;
 }
 
 /* Subrayar enlaces: !important porque es una preferencia de la persona y debe ganarle

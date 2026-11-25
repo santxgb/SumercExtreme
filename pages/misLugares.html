@@ -7,6 +7,7 @@
     <meta name="description" content="Marca los lugares de turismo extremo en Boyacá que ya visitaste y lleva tu propio registro de aventuras.">
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/accesibilidad.js"></script>
+    <script src="../js/visitados.js" defer></script>
 </head>
 <body class="paginaMisLugares">
 
@@ -38,27 +39,29 @@
             <p class="heroTexto">Marca los lugares que ya visitaste y lleva tu propio registro de aventuras. Tu lista se guarda solo en este computador.</p>
 
             <div class="tarjetaProgreso">
-                <p id="textoProgreso">Has visitado <strong>0</strong> de <strong>34</strong> lugares</p>
-                <progress class="barraProgreso" max="34" value="0" aria-labelledby="textoProgreso">0 de 34</progress>
+                <p id="textoProgreso">Has visitado <strong class="conteoVisitados">0</strong> de <strong>33</strong> lugares</p>
+                <progress class="barraProgreso" max="33" value="0" aria-labelledby="textoProgreso">0 de 33</progress>
             </div>
         </section>
 
         <section class="filtros" aria-labelledby="tituloFiltros">
             <h2 id="tituloFiltros" class="soloLectores">Filtrar mis lugares</h2>
             <ul class="listaFiltros">
-                <li><button type="button" class="chipFiltro" aria-pressed="true">Todos (34)</button></li>
-                <li><button type="button" class="chipFiltro" aria-pressed="false">Agua (10)</button></li>
-                <li><button type="button" class="chipFiltro" aria-pressed="false">Tierra (13)</button></li>
-                <li><button type="button" class="chipFiltro" aria-pressed="false">Viento (11)</button></li>
-                <li><button type="button" class="chipFiltro" aria-pressed="false">Solo visitados (0)</button></li>
+                <li><button type="button" class="chipFiltro" data-filtro="todos" aria-pressed="true">Todos (33)</button></li>
+                <li><button type="button" class="chipFiltro" data-filtro="agua" aria-pressed="false">Agua (10)</button></li>
+                <li><button type="button" class="chipFiltro" data-filtro="tierra" aria-pressed="false">Tierra (12)</button></li>
+                <li><button type="button" class="chipFiltro" data-filtro="viento" aria-pressed="false">Viento (11)</button></li>
+                <li><button type="button" class="chipFiltro" data-filtro="visitados" aria-pressed="false">Solo visitados (<span class="conteoVisitados">0</span>)</button></li>
             </ul>
         </section>
+
+        <p class="mensajeVacio" hidden>Todavía no has marcado ningún lugar como visitado. Marca la casilla de los lugares que ya conoces.</p>
 
         <!-- Cada fila: casilla + nombre + insignia "Visitado" + enlace.
              La insignia está en todas las filas; el CSS la muestra solo cuando la casilla
              está marcada, con el selector: .itemLugar input:checked ~ .etiquetaVisitado -->
 
-        <section class="grupoElemento temaAgua" aria-labelledby="tituloGrupoAgua">
+        <section class="grupoElemento temaAgua" data-elemento="agua" aria-labelledby="tituloGrupoAgua">
             <header class="grupoEncabezado">
                 <h2 id="tituloGrupoAgua"><span class="icono iconoAgua" aria-hidden="true"></span> Agua</h2>
                 <p class="grupoConteo">0 de 10 visitados</p>
@@ -66,101 +69,241 @@
             <ul class="listaChecklist">
 
                 <li class="itemLugar">
-                    <input type="checkbox" id="lugarLagoTota" name="lugarLagoTota">
-                    <label for="lugarLagoTota">
-                        <span class="lugarNombre">Lago de Tota</span>
-                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Aquitania – Tota – Cuítiva</span>
-                    </label>
-                    <span class="etiquetaVisitado">Visitado</span>
-                    <a class="enlaceDetalle" href="lugares/agua-lago-de-tota.html">Ver lugar<span class="soloLectores"> Lago de Tota</span> <span aria-hidden="true">→</span></a>
-                </li>
-
-                <li class="itemLugar">
-                    <input type="checkbox" id="lugarRioLengupa" name="lugarRioLengupa">
-                    <label for="lugarRioLengupa">
-                        <span class="lugarNombre">Río Lengupá</span>
-                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> San Luis de Gaceno</span>
-                    </label>
-                    <span class="etiquetaVisitado">Visitado</span>
-                    <a class="enlaceDetalle" href="lugares/agua-rio-lengupa.html">Ver lugar<span class="soloLectores"> Río Lengupá</span> <span aria-hidden="true">→</span></a>
-                </li>
-
-                <li class="itemLugar">
-                    <input type="checkbox" id="lugarEmbalseChivor" name="lugarEmbalseChivor">
-                    <label for="lugarEmbalseChivor">
-                        <span class="lugarNombre">Embalse de Chivor</span>
-                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Macanal / Almeida</span>
-                    </label>
-                    <span class="etiquetaVisitado">Visitado</span>
-                    <a class="enlaceDetalle" href="lugares/agua-embalse-de-chivor.html">Ver lugar<span class="soloLectores"> Embalse de Chivor</span> <span aria-hidden="true">→</span></a>
-                </li>
-
-                <li class="itemLugar">
-                    <input type="checkbox" id="lugarLagoSochagota" name="lugarLagoSochagota">
-                    <label for="lugarLagoSochagota">
+                    <input type="checkbox" id="lugar-agua-lago-sochagota" name="lugar-agua-lago-sochagota" data-lugar="agua-lago-sochagota">
+                    <label for="lugar-agua-lago-sochagota">
                         <span class="lugarNombre">Lago Sochagota</span>
                         <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Paipa</span>
                     </label>
                     <span class="etiquetaVisitado">Visitado</span>
-                    <a class="enlaceDetalle" href="lugares/agua-lago-sochagota.html">Ver lugar<span class="soloLectores"> Lago Sochagota</span> <span aria-hidden="true">→</span></a>
+                    <a class="enlaceDetalle" href="lugares/agua-lago-sochagota.html">Ver detalle<span class="soloLectores"> de Lago Sochagota</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-agua-lago-de-tota" name="lugar-agua-lago-de-tota" data-lugar="agua-lago-de-tota">
+                    <label for="lugar-agua-lago-de-tota">
+                        <span class="lugarNombre">Lago de Tota</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Aquitania – Tota – Cuítiva</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/agua-lago-de-tota.html">Ver detalle<span class="soloLectores"> de Lago de Tota</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-agua-cascadas-chitaraque" name="lugar-agua-cascadas-chitaraque" data-lugar="agua-cascadas-chitaraque">
+                    <label for="lugar-agua-cascadas-chitaraque">
+                        <span class="lugarNombre">Cascadas y quebradas de Chitaraque</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Chitaraque</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/agua-cascadas-chitaraque.html">Ver detalle<span class="soloLectores"> de Cascadas y quebradas de Chitaraque</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-agua-cueva-rubio-cavernas" name="lugar-agua-cueva-rubio-cavernas" data-lugar="agua-cueva-rubio-cavernas">
+                    <label for="lugar-agua-cueva-rubio-cavernas">
+                        <span class="lugarNombre">Cueva Rubio y cavernas</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Chitaraque</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/agua-cueva-rubio-cavernas.html">Ver detalle<span class="soloLectores"> de Cueva Rubio y cavernas</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-agua-moniquira" name="lugar-agua-moniquira" data-lugar="agua-moniquira">
+                    <label for="lugar-agua-moniquira">
+                        <span class="lugarNombre">Moniquirá (cañones y cascadas)</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Moniquirá</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/agua-moniquira.html">Ver detalle<span class="soloLectores"> de Moniquirá (cañones y cascadas)</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-agua-parque-la-periquera" name="lugar-agua-parque-la-periquera" data-lugar="agua-parque-la-periquera">
+                    <label for="lugar-agua-parque-la-periquera">
+                        <span class="lugarNombre">Parque Ecológico La Periquera</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Cerca de Villa de Leyva</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/agua-parque-la-periquera.html">Ver detalle<span class="soloLectores"> de Parque Ecológico La Periquera</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-agua-embalse-de-chivor" name="lugar-agua-embalse-de-chivor" data-lugar="agua-embalse-de-chivor">
+                    <label for="lugar-agua-embalse-de-chivor">
+                        <span class="lugarNombre">Embalse de Chivor</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Macanal / Almeida</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/agua-embalse-de-chivor.html">Ver detalle<span class="soloLectores"> de Embalse de Chivor</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-agua-cascadas-la-70-las-juntas" name="lugar-agua-cascadas-la-70-las-juntas" data-lugar="agua-cascadas-la-70-las-juntas">
+                    <label for="lugar-agua-cascadas-la-70-las-juntas">
+                        <span class="lugarNombre">Cascadas La 70 y Las Juntas</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Macanal</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/agua-cascadas-la-70-las-juntas.html">Ver detalle<span class="soloLectores"> de Cascadas La 70 y Las Juntas</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-agua-rio-lengupa" name="lugar-agua-rio-lengupa" data-lugar="agua-rio-lengupa">
+                    <label for="lugar-agua-rio-lengupa">
+                        <span class="lugarNombre">Río Lengupá</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> San Luis de Gaceno</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/agua-rio-lengupa.html">Ver detalle<span class="soloLectores"> de Río Lengupá</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-agua-rio-chicamocha" name="lugar-agua-rio-chicamocha" data-lugar="agua-rio-chicamocha">
+                    <label for="lugar-agua-rio-chicamocha">
+                        <span class="lugarNombre">Río Chicamocha (cañón)</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Límite Boyacá–Santander</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/agua-rio-chicamocha.html">Ver detalle<span class="soloLectores"> de Río Chicamocha (cañón)</span> <span aria-hidden="true">→</span></a>
                 </li>
 
             </ul>
             <a class="enlaceGrupo" href="agua.html">Ver los 10 lugares de Agua</a>
         </section>
 
-        <section class="grupoElemento temaTierra" aria-labelledby="tituloGrupoTierra">
+        <section class="grupoElemento temaTierra" data-elemento="tierra" aria-labelledby="tituloGrupoTierra">
             <header class="grupoEncabezado">
                 <h2 id="tituloGrupoTierra"><span class="icono iconoTierra" aria-hidden="true"></span> Tierra</h2>
-                <p class="grupoConteo">0 de 13 visitados</p>
+                <p class="grupoConteo">0 de 12 visitados</p>
             </header>
             <ul class="listaChecklist">
 
                 <li class="itemLugar">
-                    <input type="checkbox" id="lugarDesiertoCandelaria" name="lugarDesiertoCandelaria">
-                    <label for="lugarDesiertoCandelaria">
-                        <span class="lugarNombre">Desierto de La Candelaria</span>
-                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Villa de Leyva – Sáchica – Ráquira</span>
-                    </label>
-                    <span class="etiquetaVisitado">Visitado</span>
-                    <a class="enlaceDetalle" href="lugares/tierra-desierto-la-candelaria.html">Ver lugar<span class="soloLectores"> Desierto de La Candelaria</span> <span aria-hidden="true">→</span></a>
-                </li>
-
-                <li class="itemLugar">
-                    <input type="checkbox" id="lugarCuevaFabrica" name="lugarCuevaFabrica">
-                    <label for="lugarCuevaFabrica">
-                        <span class="lugarNombre">Cueva de la Fábrica</span>
-                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Vía Villa de Leyva – Santa Sofía</span>
-                    </label>
-                    <span class="etiquetaVisitado">Visitado</span>
-                    <a class="enlaceDetalle" href="lugares/tierra-cueva-de-la-fabrica.html">Ver lugar<span class="soloLectores"> Cueva de la Fábrica</span> <span aria-hidden="true">→</span></a>
-                </li>
-
-                <li class="itemLugar">
-                    <input type="checkbox" id="lugarCucaita" name="lugarCucaita">
-                    <label for="lugarCucaita">
+                    <input type="checkbox" id="lugar-tierra-cucaita-parque-escalada" name="lugar-tierra-cucaita-parque-escalada" data-lugar="tierra-cucaita-parque-escalada">
+                    <label for="lugar-tierra-cucaita-parque-escalada">
                         <span class="lugarNombre">Parque de escalada Cucaita</span>
                         <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Cucaita</span>
                     </label>
                     <span class="etiquetaVisitado">Visitado</span>
-                    <a class="enlaceDetalle" href="lugares/tierra-cucaita-parque-escalada.html">Ver lugar<span class="soloLectores"> Parque de escalada Cucaita</span> <span aria-hidden="true">→</span></a>
+                    <a class="enlaceDetalle" href="lugares/tierra-cucaita-parque-escalada.html">Ver detalle<span class="soloLectores"> de Parque de escalada Cucaita</span> <span aria-hidden="true">→</span></a>
                 </li>
 
                 <li class="itemLugar">
-                    <input type="checkbox" id="lugarElCocuy" name="lugarElCocuy">
-                    <label for="lugarElCocuy">
+                    <input type="checkbox" id="lugar-tierra-lago-de-tota" name="lugar-tierra-lago-de-tota" data-lugar="tierra-lago-de-tota">
+                    <label for="lugar-tierra-lago-de-tota">
+                        <span class="lugarNombre">Senderos del Lago de Tota</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Aquitania – Tota – Cuítiva</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/tierra-lago-de-tota.html">Ver detalle<span class="soloLectores"> de Senderos del Lago de Tota</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-tierra-escalada-topaga" name="lugar-tierra-escalada-topaga" data-lugar="tierra-escalada-topaga">
+                    <label for="lugar-tierra-escalada-topaga">
+                        <span class="lugarNombre">Escalada en Tópaga (Puente Reyes)</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Tópaga</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/tierra-escalada-topaga.html">Ver detalle<span class="soloLectores"> de Escalada en Tópaga (Puente Reyes)</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-tierra-cascada-cueva-hayal" name="lugar-tierra-cascada-cueva-hayal" data-lugar="tierra-cascada-cueva-hayal">
+                    <label for="lugar-tierra-cascada-cueva-hayal">
+                        <span class="lugarNombre">Cascada y Cueva del Hayal</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Santa Sofía</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/tierra-cascada-cueva-hayal.html">Ver detalle<span class="soloLectores"> de Cascada y Cueva del Hayal</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-tierra-cueva-rubio" name="lugar-tierra-cueva-rubio" data-lugar="tierra-cueva-rubio">
+                    <label for="lugar-tierra-cueva-rubio">
+                        <span class="lugarNombre">Cueva Rubio</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Chitaraque</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/tierra-cueva-rubio.html">Ver detalle<span class="soloLectores"> de Cueva Rubio</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-tierra-cueva-de-la-fabrica" name="lugar-tierra-cueva-de-la-fabrica" data-lugar="tierra-cueva-de-la-fabrica">
+                    <label for="lugar-tierra-cueva-de-la-fabrica">
+                        <span class="lugarNombre">Cueva de la Fábrica</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Vía Villa de Leyva – Santa Sofía</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/tierra-cueva-de-la-fabrica.html">Ver detalle<span class="soloLectores"> de Cueva de la Fábrica</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-tierra-desierto-la-candelaria" name="lugar-tierra-desierto-la-candelaria" data-lugar="tierra-desierto-la-candelaria">
+                    <label for="lugar-tierra-desierto-la-candelaria">
+                        <span class="lugarNombre">Desierto de La Candelaria</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Villa de Leyva – Sáchica – Ráquira</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/tierra-desierto-la-candelaria.html">Ver detalle<span class="soloLectores"> de Desierto de La Candelaria</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-tierra-ecoparque-el-hayal" name="lugar-tierra-ecoparque-el-hayal" data-lugar="tierra-ecoparque-el-hayal">
+                    <label for="lugar-tierra-ecoparque-el-hayal">
+                        <span class="lugarNombre">Ecoparque El Hayal</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Santa Sofía</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/tierra-ecoparque-el-hayal.html">Ver detalle<span class="soloLectores"> de Ecoparque El Hayal</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-tierra-gachantiva-santa-sofia" name="lugar-tierra-gachantiva-santa-sofia" data-lugar="tierra-gachantiva-santa-sofia">
+                    <label for="lugar-tierra-gachantiva-santa-sofia">
+                        <span class="lugarNombre">Gachantivá y Santa Sofía</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Cerca de Villa de Leyva</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/tierra-gachantiva-santa-sofia.html">Ver detalle<span class="soloLectores"> de Gachantivá y Santa Sofía</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-tierra-hoyo-de-la-romera" name="lugar-tierra-hoyo-de-la-romera" data-lugar="tierra-hoyo-de-la-romera">
+                    <label for="lugar-tierra-hoyo-de-la-romera">
+                        <span class="lugarNombre">Hoyo de la Romera</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Santa Sofía</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/tierra-hoyo-de-la-romera.html">Ver detalle<span class="soloLectores"> de Hoyo de la Romera</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-tierra-cueva-de-miravalles" name="lugar-tierra-cueva-de-miravalles" data-lugar="tierra-cueva-de-miravalles">
+                    <label for="lugar-tierra-cueva-de-miravalles">
+                        <span class="lugarNombre">Cueva de Miravalles</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Moniquirá</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/tierra-cueva-de-miravalles.html">Ver detalle<span class="soloLectores"> de Cueva de Miravalles</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-tierra-pnn-el-cocuy" name="lugar-tierra-pnn-el-cocuy" data-lugar="tierra-pnn-el-cocuy">
+                    <label for="lugar-tierra-pnn-el-cocuy">
                         <span class="lugarNombre">PNN El Cocuy</span>
                         <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> El Cocuy – Güicán</span>
                     </label>
                     <span class="etiquetaVisitado">Visitado</span>
-                    <a class="enlaceDetalle" href="lugares/tierra-pnn-el-cocuy.html">Ver lugar<span class="soloLectores"> PNN El Cocuy</span> <span aria-hidden="true">→</span></a>
+                    <a class="enlaceDetalle" href="lugares/tierra-pnn-el-cocuy.html">Ver detalle<span class="soloLectores"> de PNN El Cocuy</span> <span aria-hidden="true">→</span></a>
                 </li>
 
             </ul>
-            <a class="enlaceGrupo" href="tierra.html">Ver los 13 lugares de Tierra</a>
+            <a class="enlaceGrupo" href="tierra.html">Ver los 12 lugares de Tierra</a>
         </section>
 
-        <section class="grupoElemento temaViento" aria-labelledby="tituloGrupoViento">
+        <section class="grupoElemento temaViento" data-elemento="viento" aria-labelledby="tituloGrupoViento">
             <header class="grupoEncabezado">
                 <h2 id="tituloGrupoViento"><span class="icono iconoViento" aria-hidden="true"></span> Viento</h2>
                 <p class="grupoConteo">0 de 11 visitados</p>
@@ -168,43 +311,113 @@
             <ul class="listaChecklist">
 
                 <li class="itemLugar">
-                    <input type="checkbox" id="lugarGuatika" name="lugarGuatika">
-                    <label for="lugarGuatika">
-                        <span class="lugarNombre">Parque Guátika</span>
-                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Tibasosa</span>
+                    <input type="checkbox" id="lugar-viento-ventaquemada" name="lugar-viento-ventaquemada" data-lugar="viento-ventaquemada">
+                    <label for="lugar-viento-ventaquemada">
+                        <span class="lugarNombre">Ventaquemada</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Centro de Boyacá, cerca de Tunja</span>
                     </label>
                     <span class="etiquetaVisitado">Visitado</span>
-                    <a class="enlaceDetalle" href="lugares/viento-parque-guatika.html">Ver lugar<span class="soloLectores"> Parque Guátika</span> <span aria-hidden="true">→</span></a>
+                    <a class="enlaceDetalle" href="lugares/viento-ventaquemada.html">Ver detalle<span class="soloLectores"> de Ventaquemada</span> <span aria-hidden="true">→</span></a>
                 </li>
 
                 <li class="itemLugar">
-                    <input type="checkbox" id="lugarCerroAlphas" name="lugarCerroAlphas">
-                    <label for="lugarCerroAlphas">
+                    <input type="checkbox" id="lugar-viento-ventaquemada-zona-de-vuelo" name="lugar-viento-ventaquemada-zona-de-vuelo" data-lugar="viento-ventaquemada-zona-de-vuelo">
+                    <label for="lugar-viento-ventaquemada-zona-de-vuelo">
+                        <span class="lugarNombre">Ventaquemada (zona de vuelo)</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Centro de Boyacá</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/viento-ventaquemada-zona-de-vuelo.html">Ver detalle<span class="soloLectores"> de Ventaquemada (zona de vuelo)</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-viento-manoa-parque" name="lugar-viento-manoa-parque" data-lugar="viento-manoa-parque">
+                    <label for="lugar-viento-manoa-parque">
+                        <span class="lugarNombre">Manoa Parque</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> A 15 min de Paipa</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/viento-manoa-parque.html">Ver detalle<span class="soloLectores"> de Manoa Parque</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-viento-cerro-de-las-alphas" name="lugar-viento-cerro-de-las-alphas" data-lugar="viento-cerro-de-las-alphas">
+                    <label for="lugar-viento-cerro-de-las-alphas">
                         <span class="lugarNombre">Cerro de las Alphas</span>
                         <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Paipa</span>
                     </label>
                     <span class="etiquetaVisitado">Visitado</span>
-                    <a class="enlaceDetalle" href="lugares/viento-cerro-de-las-alphas.html">Ver lugar<span class="soloLectores"> Cerro de las Alphas</span> <span aria-hidden="true">→</span></a>
+                    <a class="enlaceDetalle" href="lugares/viento-cerro-de-las-alphas.html">Ver detalle<span class="soloLectores"> de Cerro de las Alphas</span> <span aria-hidden="true">→</span></a>
                 </li>
 
                 <li class="itemLugar">
-                    <input type="checkbox" id="lugarVentaquemada" name="lugarVentaquemada">
-                    <label for="lugarVentaquemada">
-                        <span class="lugarNombre">Ventaquemada</span>
-                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Centro de Boyacá</span>
+                    <input type="checkbox" id="lugar-viento-santa-rosa-de-viterbo" name="lugar-viento-santa-rosa-de-viterbo" data-lugar="viento-santa-rosa-de-viterbo">
+                    <label for="lugar-viento-santa-rosa-de-viterbo">
+                        <span class="lugarNombre">Santa Rosa de Viterbo</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Santa Rosa de Viterbo</span>
                     </label>
                     <span class="etiquetaVisitado">Visitado</span>
-                    <a class="enlaceDetalle" href="lugares/viento-ventaquemada.html">Ver lugar<span class="soloLectores"> Ventaquemada</span> <span aria-hidden="true">→</span></a>
+                    <a class="enlaceDetalle" href="lugares/viento-santa-rosa-de-viterbo.html">Ver detalle<span class="soloLectores"> de Santa Rosa de Viterbo</span> <span aria-hidden="true">→</span></a>
                 </li>
 
                 <li class="itemLugar">
-                    <input type="checkbox" id="lugarAltoCarvajal" name="lugarAltoCarvajal">
-                    <label for="lugarAltoCarvajal">
+                    <input type="checkbox" id="lugar-viento-parque-guatika" name="lugar-viento-parque-guatika" data-lugar="viento-parque-guatika">
+                    <label for="lugar-viento-parque-guatika">
+                        <span class="lugarNombre">Parque Guátika</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Tibasosa</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/viento-parque-guatika.html">Ver detalle<span class="soloLectores"> de Parque Guátika</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-viento-aventura-park-villa-de-leyva" name="lugar-viento-aventura-park-villa-de-leyva" data-lugar="viento-aventura-park-villa-de-leyva">
+                    <label for="lugar-viento-aventura-park-villa-de-leyva">
+                        <span class="lugarNombre">Aventura Park Villa de Leyva</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Villa de Leyva – Gachantivá</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/viento-aventura-park-villa-de-leyva.html">Ver detalle<span class="soloLectores"> de Aventura Park Villa de Leyva</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-viento-villa-de-leyva" name="lugar-viento-villa-de-leyva" data-lugar="viento-villa-de-leyva">
+                    <label for="lugar-viento-villa-de-leyva">
+                        <span class="lugarNombre">Villa de Leyva</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Villa de Leyva</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/viento-villa-de-leyva.html">Ver detalle<span class="soloLectores"> de Villa de Leyva</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-viento-embalse-de-chivor" name="lugar-viento-embalse-de-chivor" data-lugar="viento-embalse-de-chivor">
+                    <label for="lugar-viento-embalse-de-chivor">
+                        <span class="lugarNombre">Embalse de Chivor</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Macanal / Almeida</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/viento-embalse-de-chivor.html">Ver detalle<span class="soloLectores"> de Embalse de Chivor</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-viento-alto-de-carvajal" name="lugar-viento-alto-de-carvajal" data-lugar="viento-alto-de-carvajal">
+                    <label for="lugar-viento-alto-de-carvajal">
                         <span class="lugarNombre">Alto de Carvajal</span>
                         <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Pachavita</span>
                     </label>
                     <span class="etiquetaVisitado">Visitado</span>
-                    <a class="enlaceDetalle" href="lugares/viento-alto-de-carvajal.html">Ver lugar<span class="soloLectores"> Alto de Carvajal</span> <span aria-hidden="true">→</span></a>
+                    <a class="enlaceDetalle" href="lugares/viento-alto-de-carvajal.html">Ver detalle<span class="soloLectores"> de Alto de Carvajal</span> <span aria-hidden="true">→</span></a>
+                </li>
+
+                <li class="itemLugar">
+                    <input type="checkbox" id="lugar-viento-canon-del-chicamocha" name="lugar-viento-canon-del-chicamocha" data-lugar="viento-canon-del-chicamocha">
+                    <label for="lugar-viento-canon-del-chicamocha">
+                        <span class="lugarNombre">Cañón del Chicamocha</span>
+                        <span class="lugarUbicacion"><span class="icono iconoUbicacion" aria-hidden="true"></span> Soatá / Boavita</span>
+                    </label>
+                    <span class="etiquetaVisitado">Visitado</span>
+                    <a class="enlaceDetalle" href="lugares/viento-canon-del-chicamocha.html">Ver detalle<span class="soloLectores"> de Cañón del Chicamocha</span> <span aria-hidden="true">→</span></a>
                 </li>
 
             </ul>
@@ -311,9 +524,11 @@
         <p class="panelNota">Tus ajustes se guardan en este computador. Esc cierra este panel.</p>
     </dialog>
 
-    <a class="botonAccesibilidad" aria-haspopup="dialog" aria-controls="panelAccesibilidad" href="accesibilidad.html">
-        <span class="icono iconoAccesibilidad" aria-hidden="true"></span> Accesibilidad
-    </a>
+    <aside aria-label="Ajustes de accesibilidad">
+        <a class="botonAccesibilidad" aria-haspopup="dialog" aria-controls="panelAccesibilidad" href="accesibilidad.html">
+            <span class="icono iconoAccesibilidad" aria-hidden="true"></span> Accesibilidad
+        </a>
+    </aside>
 
 </body>
 </html>

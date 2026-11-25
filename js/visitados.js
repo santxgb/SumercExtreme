@@ -136,7 +136,15 @@ function conectarFicha() {
     }
 
     const lugar = casilla.dataset.lugar;
+    const conteo = document.querySelector(".conteoFicha");
     casilla.checked = leerVisitados().has(lugar);
+
+    // "Llevas X de 33 lugares visitados": está en una región aria-live, así que el lector lo anuncia al cambiar
+    function actualizarConteo() {
+        if (conteo) {
+            conteo.textContent = leerVisitados().size;
+        }
+    }
 
     casilla.addEventListener("change", () => {
         const visitados = leerVisitados();
@@ -146,14 +154,18 @@ function conectarFicha() {
             visitados.delete(lugar);
         }
         guardarVisitados(visitados);
+        actualizarConteo();
     });
 
-    // Si cambia en Mis lugares abierta en otra pestaña, la casilla se actualiza
+    // Si cambia en Mis lugares abierta en otra pestaña, la casilla y el conteo se actualizan
     window.addEventListener("storage", (evento) => {
         if (evento.key === CLAVE_VISITADOS) {
             casilla.checked = leerVisitados().has(lugar);
+            actualizarConteo();
         }
     });
+
+    actualizarConteo();
 }
 
 document.addEventListener("DOMContentLoaded", conectarMisLugares);

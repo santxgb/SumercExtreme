@@ -434,6 +434,27 @@
     text-decoration: underline;
 }
 
+/* Debajo de la casilla: cuántos lugares lleva y un enlace a Mis lugares.
+   Salió de las pruebas de usabilidad: después de marcar, no encontraban cómo ver sus lugares */
+.progresoFicha {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4px 12px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.enlaceMisLugares {
+    color: #00838f;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.enlaceMisLugares:hover {
+    text-decoration: underline;
+}
+
 /* ---- Colores de Tierra (marrón y verde lima) ---- */
 
 .temaTierra .fotoPrincipal,
@@ -466,7 +487,8 @@
 .temaTierra .datoLugar dt,
 .temaTierra .cajaSeguridad .notaFuente,
 .temaTierra .marcarVisitado,
-.temaTierra .enlaceReportar {
+.temaTierra .enlaceReportar,
+.temaTierra .enlaceMisLugares {
     color: #3e2723;
 }
 
